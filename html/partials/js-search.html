@@ -1,0 +1,56 @@
+<div class="pa-header">
+<h2>搜索输入框</h2>
+</div>
+<h4 class="lead">
+	普通搜索输入框
+</h4>
+<div class="bs-example">
+		<div class="ndp-search-wrapper" name="plain"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+$(".ndp-search-wrapper[name=plain]").search({
+	placeholder:"请输入字符"
+});		
+		</code>
+	</pre>
+</div>
+<h4 class="lead">
+	搜索输入框--不可用
+</h4>
+<div class="bs-example">
+		<div class="ndp-search-wrapper" name="disable"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+$(".ndp-search-wrapper[name=disable]").search({
+	placeholder:"请输入字符",
+	disabled:true
+});		
+		</code>
+	</pre>
+</div>
+
+
+
+<h4 class="lead">
+	搜索输入框--带范围选择
+</h4>
+<div class="bs-example">
+		<div class="ndp-search-wrapper" name="mix"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+$(".ndp-search-wrapper[name=mix]").search({
+	type:2,
+	dropList:[{text:"中国"},{text:"美国"},{text:"德国"}],
+	disabled:true
+}).on("search_input_change",function(e){
+
+});		
+		</code>
+	</pre>
+</div>

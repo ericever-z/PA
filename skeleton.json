@@ -1,0 +1,31 @@
+{
+    "name": "ProjectA",
+    "type": 1,
+    "version": "1.0.0",
+    "author": "ericever",
+    "frame": "unknow",
+    "structure": [
+        "ProjectA",
+        "/src",
+        "/src/css",
+        "/src/css/global",
+        "/src/css/modules",
+        "/src/css/pages",
+        "/src/js",
+        "/src/css/fonts",
+        "/html",
+        "/src/imgs",
+        "/lib",
+        "/test",
+        "/test/spec",
+        "/test/report",
+        "/src/js/view",
+        "/src/js/kernel",
+        "/src/js/view/pages",
+        "/src/js/view/pages/pieces",
+        "/src/js/view/pages/pieces/segs",
+        "/src/js/view/pages/pieces/segs/combs",
+        "/src/js/model",
+        "/src/js/utils"
+    ]
+}

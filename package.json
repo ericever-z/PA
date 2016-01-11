@@ -1,0 +1,23 @@
+{
+    "name": "ProjectA",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "ericever",
+    "license": "ISC",
+    "devDependencies": {
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-requirejs": "*"
+    },
+    "peerDependencies": {
+        "bower": "*",
+        "grunt": "*",
+        "grunt-cli": "*"
+    }
+}

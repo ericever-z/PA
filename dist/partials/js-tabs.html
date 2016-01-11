@@ -1,0 +1,91 @@
+<div class="pa-header">
+<h1>Tab控件</h1>
+</div>
+<h4 class="lead">
+	普通tab
+</h4>
+<div class="bs-example">
+	<div class="ndp-tab-wrapper" name="plain-tab"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class=&quot;ndp-tab-wrapper&quot; name=&quot;plain-tab&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("div.ndp-bread-wrapper[name=plain-bread]").bread({
+	list:["Home","Library","Data"]
+});		
+		</code>
+	</pre>
+</div>
+<h4 class="lead">
+	Tab--带badge的 tab
+</h4>
+<div class="bs-example">
+	<div class="ndp-tab-wrapper" name="badge-tab"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class=&quot;ndp-tab-wrapper&quot; name=&quot;badge-tab&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("div.ndp-tab-wrapper[name=badge-tab]").tabs({
+	list:[{text:"China",badge:20},{text:"USA",badge:999},{text:"CANADA",badge:10}],
+	badge:true
+});			
+		</code>
+	</pre>
+</div>
+<h4 class="lead">
+	Tab--可删除的tab
+</h4>
+<div class="bs-example">
+	<div class="ndp-tab-wrapper" name="rm-tab"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class=&quot;ndp-tab-wrapper&quot; name=&quot;rm-tab&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("div.ndp-tab-wrapper[name=rm-tab]").tabs({
+	list:[{text:"China",badge:20},{text:"USA",badge:999},{text:"CANADA",badge:10}],
+	rm:true
+});	
+		</code>
+	</pre>
+</div>
+<h4 class="lead">
+	Tab--可翻页的tab
+</h4>
+<div class="bs-example">
+	<div class="ndp-tab-wrapper" name="more-tab"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class=&quot;ndp-tab-wrapper&quot; name=&quot;more-tab&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("div.ndp-tab-wrapper[name=more-tab]").tabs({
+	list:[{text:"中华人民共和国",badge:20},
+		  {text:"美利坚和中国",badge:999},
+		  {text:"日本",badge:10},
+		 {text:"德国",badge:10},
+		 {text:"韩国",badge:10},
+		 {text:"泰国",badge:10}],
+	type:2
+});		
+		</code>
+	</pre>
+</div>

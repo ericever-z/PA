@@ -1,0 +1,15 @@
+.nxdc-footer{
+	position: absolute;
+    width: 100%;
+	height: 50px;
+	background-color:transparent;
+    bottom: 0;
+}
+.nxdc-footer div.container{
+	position: relative;
+	height: 50px;
+	color:#d1d1d1;
+	line-height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
