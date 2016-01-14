@@ -10,9 +10,7 @@ define(function(){
 				  {small:"../imgs/list2.jpg",big:"../imgs/show6.jpg",w:355,h:501},
 				  {small:"../imgs/list1.jpg",big:"../imgs/show7.jpg",w:400,h:600},
 				  {small:"../imgs/list3.jpg",big:"../imgs/show8.jpg",w:533,h:798},
-				  {small:"../imgs/list4.jpg",big:"../imgs/show9.jpg",w:500,h:750},
-				  {small:"",big:""},
-				  {small:"",big:""}
+				  {small:"../imgs/list4.jpg",big:"../imgs/show9.jpg",w:500,h:750}
 				 ]
 		});
 	}

@@ -18,13 +18,13 @@ define(['./segs/seg-split','./segs/seg-showcase'],function(sp,sc){
             if(msg.type=="com_li_click" || msg.type=="btn_dl_click"){
                 if(msg.data.index > 0) {
                     this._DOM.removeClass("hidden");
+					_this.children.forEach(function(child){
+						child.update(msg);
+					});					
                 }else{
                     this._DOM.addClass("hidden");                
                 }
             }      
-			_this.children.forEach(function(child){
-				child.update(msg);
-			});
 		}
 		
 	}

@@ -24,8 +24,8 @@ define(['static','http','note',
 				<a href="#menu'+index+'" aria-controls="menu'+index+'" role="tab" data-toggle="tab">'+da.name+'</a></li>'; 
 				ctns +='<div role="tabpanel" class="tab-pane '+(index==0?"active":"")+'" id="menu'+index+'">'+index+'</div>';
 			});
-			hwdL.html(lis);	
-			hwdC.html(ctns);
+			hwdL.html(lis);// 配置部分的tab列表
+			hwdC.html(ctns); //配置部分的内容  右侧
 		},
 		/**
 		**@param {String} url 
@@ -36,9 +36,11 @@ define(['static','http','note',
 			var RE = new RegExp("js-.+","i");
 			if(RE.test(name)){
 				var plugin = name.match(/js-(.+)/i)[1];
+				if(plugin=="start") plugin = "table";
 				require([plugin],function(){
 					switch(plugin){
-						case "table": 								
+						case "table":
+						case "start":
 							dTable();//演示用的 table 实例化
 							break;
 						case "drop":
@@ -111,10 +113,10 @@ define(['static','http','note',
 		}
 		
 		this.update = function(msg){
-			_this.itemIndex = msg.data.index;//第几个菜单
+			_this.itemIndex = msg.data.index-1;//第几个菜单
 			_this.tabIndex = 0;
 			_this._DOM.attr("value",msg.data.index);
-			dom.concrate(_this._SUB_DOM1,_this._SUB_DOM2,Static.TABS[msg.data.index]);
+			dom.concrate(_this._SUB_DOM1,_this._SUB_DOM2,Static.TABS[msg.data.index-1]);
 			var url   = "./partials/" + Static.TABS[_this.itemIndex][0].part+".html";
 			http.exec(url);//加载模板
 		}

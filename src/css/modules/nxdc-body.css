@@ -187,6 +187,9 @@ ul.ndp-nav-tabs>li.active>a:focus,ul.ndp-nav-tabs>li.active>a,ul.ndp-nav-tabs>li
 .bs-callout-warning{
 	border-left-color: #f3930b;
 }
+div.ndp-sinput-wrapper{
+	width: 180px;
+}
 
 div.ndp-tab-wrapper[name=more-tab]{
 	width:400px;
