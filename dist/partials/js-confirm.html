@@ -1,0 +1,43 @@
+<div class="pa-header">
+<h2>弹出窗口--confirm</h2>
+<p>此插件依赖bootstrap的modal控件，务必确保使用前加载bootstrap@3</p>
+</div>
+<h4 class="lead">
+	普通确认窗口confirm
+</h4>
+<div class="bs-example">
+		<button type="button" class="btn btn-primary">点击显示Confirm</button>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+$("button.btn-primary").click(function(){
+	$("#confirm-holder").confirm({
+		content:"你的报告已经准备完毕，提交之后无法修改，你确定提交？"
+	});
+});			
+		</code>
+	</pre>
+</div>
+<div class="pa-header">
+</div>
+<h4 class="lead">
+	rich confirm--带图标显示，点击确认，监听事件click_ok, 点击X或者取消监听事件click_cancel
+</h4>
+<div class="bs-example">
+		<button type="button" class="btn btn-warning">点击显示rich  Alert</button>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+$("button.btn-warning").click(function(){
+	$("#confirm-holder").confirm({
+		icon:"&lt;i class='glyphicon glyphicon-globe'&gt;&lt;/i&gt;",
+		content:"这里显示的是一个地球，用来测试图片在?",
+		btnOK:"确定",
+		btnCANCEL:"CANCEL"
+	});
+});				
+		</code>
+	</pre>
+</div>

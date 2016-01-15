@@ -90,10 +90,6 @@ module.exports=function (grunt) {
 				return "data-main="+"./js/"+ filename.replace(/\.html/i,"");   
 			});
 			grunt.file.write('dist/'+ (subdir?subdir+"/":"")+filename,one);
-		});
-		grunt.file.recurse('lib/ztree/zTreeStyle/img/',function(abspath, rootdir, subdir, filename){
-			var src = 'lib/ztree/zTreeStyle/img/'+ (subdir?subdir+"/":"") +filename;
-			grunt.file.copy(src,'dist/css/pages/img/'+ (subdir?subdir+"/":"")+filename);
 		});		
 		console.log("-------打包，压缩，合并，完成!------------");		
 	});		

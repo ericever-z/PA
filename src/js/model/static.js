@@ -37,7 +37,7 @@ define(function(){
 						{name:"栅格系统",part:"grid"},
 						{name:"按钮",part:"button"},
 						{name:"表格",part:"table"},
-						{name:"表单",part:"form"},
+						{name:"tabs",part:"tabs"},
 						{name:"图片",part:"pic"}
 					],
 					[

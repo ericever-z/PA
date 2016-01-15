@@ -4,7 +4,7 @@
 
 
 
-.ndp-table-header[name='motley']{
+.ndp-table-wrapper[name='motley']{
 	
 } 
 
@@ -14,4 +14,31 @@
 
 .ndp-table-wrapper[name='motley'] .ndp-table-body .ndp-table-row:nth-child(odd){
 		background-color: white;
+}
+
+
+
+.ndp-table-wrapper[name='border'] .ndp-table-row{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+.ndp-table-wrapper[name='col'] .ndp-table-col:nth-child(n+2){
+	border-left: 1px solid #ccc;
+}
+
+.btn{
+	border-radius: 0;
+}
+
+
+div.ndp-tab-wrapper[name='vertical']>ul.nav.nav-tabs-cus>li{
+	width: 150px;
+	clear:both;
+}
+div[name='vertical'].ndp-tab-wrapper>ul.nav.nav-tabs-cus>li.active>a{
+	border-width: 0;
+	border-left:2px solid #fac925;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
 }
