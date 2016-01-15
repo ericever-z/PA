@@ -6,7 +6,7 @@ define(function(){
 			  {id:1102,name:"hello_23",info:"hello - japan 34",gender:"woman"},
 			  {id:1103,name:"hello_34",info:"hello - euro 23",gender:"no sign"}]	
 		});
-		$(".ndp-table-wrapper[name='plain']").table({
+		$(".ndp-table-wrapper[name='plain']").empty().table({
 		head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列"},
 		data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man"},
 			  {id:1102,name:"hello_23",info:"hello - japan 34",gender:"woman"},
