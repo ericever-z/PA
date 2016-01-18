@@ -11,10 +11,8 @@
 <div class="highlight">
 	<pre class="prettyprint">
 		<code class="language-js">
-$("button.btn-primary").click(function(){
-	$("#confirm-holder").confirm({
-		content:"你的报告已经准备完毕，提交之后无法修改，你确定提交？"
-	});
+$("#confirm-holder").confirm({
+	content:"你的报告已经准备完毕，提交之后无法修改，你确定提交？"
 });			
 		</code>
 	</pre>
@@ -25,19 +23,17 @@ $("button.btn-primary").click(function(){
 	rich confirm--带图标显示，点击确认，监听事件click_ok, 点击X或者取消监听事件click_cancel
 </h4>
 <div class="bs-example">
-		<button type="button" class="btn btn-warning">点击显示rich  Alert</button>
+		<button type="button" class="btn btn-warning">点击显示rich  Confirm</button>
 </div>
 <div class="highlight">
 	<pre class="prettyprint">
 		<code class="language-js">
-$("button.btn-warning").click(function(){
-	$("#confirm-holder").confirm({
-		icon:"&lt;i class='glyphicon glyphicon-globe'&gt;&lt;/i&gt;",
-		content:"这里显示的是一个地球，用来测试图片在?",
-		btnOK:"确定",
-		btnCANCEL:"CANCEL"
-	});
-});				
+$("#confirm-holder").confirm({
+	icon:"&lt;i class='glyphicon glyphicon-globe'&gt;&lt;/i&gt;",
+	content:"这里显示的是一个地球，用来测试图片在?",
+	btnOK:"确定",
+	btnCANCEL:"CANCEL"
+});			
 		</code>
 	</pre>
 </div>
