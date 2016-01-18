@@ -95,7 +95,7 @@ define(function(){
 			
 			//复杂表单
 			$("button.btn-danger").click(function(e){
-			$("#confirm-holder").prompt({
+			$("#prompt-holder").prompt({
 					title:"<i class='glyphicon glyphicon-home'></i>&nbsp;复杂表单",
 					body:function(body){
 						body.addClass("body-fixed-height");
