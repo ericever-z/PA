@@ -2,7 +2,7 @@ define(function(){
 	function Static(){};
 		/**菜单列表**/
 	Static.MENU_LIST = [{name:"首页"},
-						{name:"简介"},
+						{name:"简介1"},
 						{name:"控件"},
 						{name:"CSS"},
 						{name:"Demo"}];
