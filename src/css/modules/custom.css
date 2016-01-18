@@ -47,11 +47,12 @@ div[name='vertical'].ndp-tab-wrapper>ul.nav.nav-tabs-cus>li.active>a{
 **分页
 **/
 /*** 修改边框颜色***/
-ul>li.page-item{
+.ndp-page-wrapper[name='plain'] ul>li.page-item{
 	border-color:#2c9be1;
 	color:#ce6c0a; /**文字颜色***/
 }
 /***修改选中背景色****/
-ul.pagination>li.page-item.active{
+.ndp-page-wrapper[name='plain'] ul.pagination>li.page-item.active{
 	background-color:#2782bb;
+	color:white;
 }
