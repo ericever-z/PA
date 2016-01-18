@@ -57,16 +57,18 @@ module.exports=function (grunt) {
                 dest: 'dist/imgs/',
                 flatten: true,
                 filter: 'isFile'              
-              },
-			 {//copy  requirejs
-                expand: true,
-                cwd: 'lib/requirejs/',
-                src: '*.js',
-                dest: 'dist/lib/',
-                flatten: true,
-                filter: 'isFile'              
-              }]
+              }
+			]
         };
+//			 {//copy  requirejs
+//                expand: true,
+//                cwd: 'lib/requirejs/',
+//                src: '*.js',
+//                dest: 'dist/lib/',
+//                flatten: true,
+//                filter: 'isFile'              
+//              }		
+		
 //        o.watch.css = {//监视css文件发生的改变
 //            files : [(ske.type=="1")?'src/css/**/*.css':'css/**/*.css'],
 //            options : {nospawn : true}
@@ -81,12 +83,11 @@ module.exports=function (grunt) {
 		grunt.file.recurse('html/',function(abspath, rootdir, subdir, filename){
 			var html = grunt.file.read('html/'+ (subdir?subdir+"/":"") +filename);
 			var one = html.replace(/href=\"(.+?)\.css\"/i,function(all,a){
-				console.log("a:" + a);
 				return "href="+"./css/pages/"+filename.replace(/\.html/i,".css"); 
 			});
-			one = one.replace(/src=\"(.+?)require.js\"/i,function(all,b){ 
-				return "src="+"'./lib/require.js'";  
-			});
+//			one = one.replace(/src=\"(.+?)require.js\"/i,function(all,b){ 
+//				return "src="+"'./lib/require.js'";  
+//			});
 			one = one.replace(/data-main=\"(.+?)\"/i,function(all,b){ 
 				return "data-main="+"./js/"+ filename.replace(/\.html/i,"");   
 			});
