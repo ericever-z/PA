@@ -30,7 +30,7 @@ define(function(){
 						{name:"垂直树状菜单",part:"js-vList"},
 						{name:"搜素输入框",part:"js-search"},
 						{name:"进度条",part:"js-progressbar"},
-						{name:"图片查看器",part:"js-gallery"},
+						{name:"图片查看器",part:"js-gallery"}
 					],		
 					[
 						{name:"概览",part:"overview"},
@@ -38,17 +38,11 @@ define(function(){
 						{name:"按钮",part:"button"},
 						{name:"表格",part:"table"},
 						{name:"tabs",part:"tabs"},
-						{name:"图片",part:"pic"}
+						{name:"分页",part:"page"}
 					],
 					[
-						{name:"Glyphicons图标",part:"icons"},
-						{name:"下拉菜单",part:"drop"},
-						{name:"时间选择器",part:"date"},
-						{name:"输入框",part:"input"},
-						{name:"输入组",part:""},
-						{name:"搜索",part:""},
-						{name:"按钮下拉菜单",part:""},
-						{name:"按钮组",part:"buttons"}
+						{name:"示例网站1",part:"site1"},
+						{name:"示例网站2",part:"site2"}
 					]
 		
 	];
