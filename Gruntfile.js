@@ -80,7 +80,8 @@ module.exports=function (grunt) {
 	grunt.task.registerTask("replace","just for fun",function(arg1,arg2){
 		grunt.file.recurse('html/',function(abspath, rootdir, subdir, filename){
 			var html = grunt.file.read('html/'+ (subdir?subdir+"/":"") +filename);
-			var one = html.replace(/href=\"(.+?)\.css\"/i,function(all,a){ 
+			var one = html.replace(/href=\"(.+?)\.css\"/i,function(all,a){
+				console.log("a:" + a);
 				return "href="+"./css/pages/"+filename.replace(/\.html/i,".css"); 
 			});
 			one = one.replace(/src=\"(.+?)require.js\"/i,function(all,b){ 
