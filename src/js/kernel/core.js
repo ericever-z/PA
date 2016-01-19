@@ -58,7 +58,7 @@ define(['note'],function(note){
 	**/
 	Base.prototype.notify = function(msg){
 		this.children.forEach(function(child){
-			if(child && child.hasOwnProperty('notify')) child.notify(msg)
+			if(child && child.notify) child.notify(msg)
 		});	
 	}
 	/**
