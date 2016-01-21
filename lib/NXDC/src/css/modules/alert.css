@@ -71,7 +71,7 @@
 /****提示内容***/
 .content-itself{
 	font-size: 14px;
-	word-break: break-word;
+	word-wrap: break-word;
 }
 .modal-dialog-ndp>.modal-content>.modal-footer{
 	border-width:0;
