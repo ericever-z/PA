@@ -123,6 +123,7 @@ div.nxdc-config.container{
 	padding: 0;
 	display: inline-block;
 	top:0;
+	left:0;
 	bottom: 0;
 	background-color: #f2f2f2;
 }
