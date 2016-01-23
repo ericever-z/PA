@@ -27,7 +27,8 @@ require.config({
 		'vList':'../../lib/NXDC/src/js/components/vList',
 		'search':'../../lib/NXDC/src/js/components/search',
 		'gallery':'../../lib/NXDC/src/js/components/gallery',
-		'progressbar':'../../lib/NXDC/src/js/components/progressbar'
+		'progressbar':'../../lib/NXDC/src/js/components/progressbar',
+		'vList2':'../../lib/NXDC/src/js/components/vList2'
     },
     shim:{
         'bootstrap':{

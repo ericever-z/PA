@@ -28,6 +28,7 @@ define(function(){
 						{name:"对话框prompt",part:"js-prompt"},
 						{name:"树状菜单",part:"js-tree"},
 						{name:"垂直树状菜单",part:"js-vList"},
+						{name:"侧边栏菜单",part:"js-vList2"},
 						{name:"搜素输入框",part:"js-search"},
 						{name:"进度条",part:"js-progressbar"},
 						{name:"图片查看器",part:"js-gallery"}

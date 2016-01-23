@@ -11,10 +11,11 @@ define(['static','http','note',
 		'./demo-confirm','./demo-prompt',
 	    './demo-tree','./demo-vList',
 		'./demo-search','./demo-gallery',
-		'./demo-progressbar'],function(Static,http,note,dTable,
+		'./demo-progressbar','./demo-vList2'],function(Static,http,note,dTable,
 								dDrop,dPage,dBread,dTabs,
 								dSinput,dTip,dAlert,dConfirm,
-								dPrompt,dTree,dVL,dSearch,dGallery,dProgressbar){
+								dPrompt,dTree,dVL,dSearch,
+								dGallery,dProgressbar,dvList2){
 	var dom ={
 		concrate:function(hwdL,hwdC,arr){
 			var lis = '';
@@ -84,6 +85,9 @@ define(['static','http','note',
 							break;
 						case "progressbar":
 							dProgressbar();
+							break;
+						case "vList2":
+							dvList2();
 							break;
 					}
 					prettyPrint();//渲染 代码 
