@@ -11,11 +11,12 @@ define(['static','http','note',
 		'./demo-confirm','./demo-prompt',
 	    './demo-tree','./demo-vList',
 		'./demo-search','./demo-gallery',
-		'./demo-progressbar','./demo-vList2'],function(Static,http,note,dTable,
+		'./demo-progressbar','./demo-vList2',
+	    './demo-drop2'],function(Static,http,note,dTable,
 								dDrop,dPage,dBread,dTabs,
 								dSinput,dTip,dAlert,dConfirm,
 								dPrompt,dTree,dVL,dSearch,
-								dGallery,dProgressbar,dvList2){
+								dGallery,dProgressbar,dvList2,dDrop2){
 	var dom ={
 		concrate:function(hwdL,hwdC,arr){
 			var lis = '';
@@ -88,6 +89,9 @@ define(['static','http','note',
 							break;
 						case "vList2":
 							dvList2();
+							break;
+						case "drop2":
+							dDrop2();
 							break;
 					}
 					prettyPrint();//渲染 代码 

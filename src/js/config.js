@@ -28,7 +28,8 @@ require.config({
 		'search':'../../lib/NXDC/src/js/components/search',
 		'gallery':'../../lib/NXDC/src/js/components/gallery',
 		'progressbar':'../../lib/NXDC/src/js/components/progressbar',
-		'vList2':'../../lib/NXDC/src/js/components/vList2'
+		'vList2':'../../lib/NXDC/src/js/components/vList2',
+		'drop2':'../../lib/NXDC/src/js/components/drop2'
     },
     shim:{
         'bootstrap':{
@@ -37,6 +38,9 @@ require.config({
 		'alert':{
 			deps:['bootstrap']
 		},
+		'drop2':{
+			deps:['bootstrap']
+		},		
 		'confirm':{
 			deps:['bootstrap']
 		},

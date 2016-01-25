@@ -18,6 +18,7 @@ define(function(){
 						{name:"如何使用",part:"js-start"},
 						{name:"列表",part:"js-table"},
 						{name:"下拉菜单",part:"js-drop"},
+						{name:"文字下拉选项",part:"js-drop2"},
 						{name:"分页",part:"js-page"},
 						{name:"面包屑",part:"js-bread"},
 						{name:"Tabs",part:"js-tabs"},

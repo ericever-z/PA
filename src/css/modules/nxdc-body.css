@@ -219,3 +219,7 @@ div.ndp-search-wrapper[name="mix"]{
 	width: 400px;
 }
 
+.bs-example.bs-example2{
+	min-height: 100px;
+}
+
