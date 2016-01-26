@@ -29,7 +29,9 @@ require.config({
 		'gallery':'../../lib/NXDC/src/js/components/gallery',
 		'progressbar':'../../lib/NXDC/src/js/components/progressbar',
 		'vList2':'../../lib/NXDC/src/js/components/vList2',
-		'drop2':'../../lib/NXDC/src/js/components/drop2'
+		'drop2':'../../lib/NXDC/src/js/components/drop2',
+		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
+		'moment':'../../lib/moment/moment.min'
     },
     shim:{
         'bootstrap':{
@@ -49,6 +51,9 @@ require.config({
 		},		
 		'prompt':{
 			deps:['bootstrap','drop']
+		},		
+		'daterangepicker':{
+			deps:['bootstrap', 'moment']
 		}
     }
 });

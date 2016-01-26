@@ -12,11 +12,11 @@ define(['static','http','note',
 	    './demo-tree','./demo-vList',
 		'./demo-search','./demo-gallery',
 		'./demo-progressbar','./demo-vList2',
-	    './demo-drop2'],function(Static,http,note,dTable,
+	    './demo-drop2', './demo-daterangepicker'],function(Static,http,note,dTable,
 								dDrop,dPage,dBread,dTabs,
 								dSinput,dTip,dAlert,dConfirm,
 								dPrompt,dTree,dVL,dSearch,
-								dGallery,dProgressbar,dvList2,dDrop2){
+								dGallery,dProgressbar,dvList2,dDrop2, daterangepicker){
 	var dom ={
 		concrate:function(hwdL,hwdC,arr){
 			var lis = '';
@@ -92,6 +92,9 @@ define(['static','http','note',
 							break;
 						case "drop2":
 							dDrop2();
+							break;
+						case "daterangepicker":
+							daterangepicker();
 							break;
 					}
 					prettyPrint();//渲染 代码 

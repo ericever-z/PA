@@ -32,7 +32,8 @@ define(function(){
 						{name:"侧边栏菜单",part:"js-vList2"},
 						{name:"搜素输入框",part:"js-search"},
 						{name:"进度条",part:"js-progressbar"},
-						{name:"图片查看器",part:"js-gallery"}
+						{name:"图片查看器",part:"js-gallery"},
+						{name:"日期范围选择器",part:"js-daterangepicker"},
 					],		
 					[
 						{name:"概览",part:"overview"},
