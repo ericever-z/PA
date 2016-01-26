@@ -1,0 +1,35 @@
+<div class="pa-header">
+    <h1>日期范围选择器</h1>
+</div>
+<p><a href="https://github.com/dangrossman/bootstrap-daterangepicker">daterangepicker</a>是github上优秀的开源项目，其<a href="http://www.daterangepicker.com/">官网</a>上有非常丰富的例子和使用方法。在uikit组件库中，仅对daterangepicker的css样式做了必要的修改。这些修改保存在daterangepicker-theme.css文件中。下面将举一些简单的例子。</p>
+<h4 class="lead">
+	普通用法
+</h4>
+<div class="bs-example">
+    <input type='text' class="daterangepicker-sample form-control">
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+		<code class="language-js">
+&lt;input type='text' class="daterangepicker-sample form-control" &gt;			
+		</code>
+	</pre>
+    <pre class="prettyprint">
+		<code class="language-js">			
+$('.daterangepicker-sample').daterangepicker({
+    "ranges": {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    },
+    "startDate": "01/20/2016",
+    "endDate": "01/26/2016"
+}, function(start, end, label) {
+  	console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+});
+		</code>
+	</pre>
+</div>
