@@ -12,12 +12,8 @@ define(['./home-sub-piece',
 		};
 		
 		this.update = function(msg){
-            if((msg.type=="com_li_click" && msg.data.index>0)||msg.type == "btn_dl_click"){
-                if(msg.data.index > 0) {
-                    _this._DOM.addClass("nxdc-main-sec");
-                }else{
-                    _this._DOM.removeClass("nxdc-main-sec");
-                }
+            if(msg.type=="com_li_click" ||msg.type == "btn_dl_click"){
+				_this._DOM.toggleClass("nxdc-main-sec",msg.data.index>0?true:false);
             }			
 			_this.children.forEach(function(child){
 				child.update(msg);

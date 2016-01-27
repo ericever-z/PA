@@ -23,10 +23,10 @@ define(['static'],function(Static){
 			_this._DOM = $("#nxdc-menu");
 			dom.init(_this._DOM,Static.MENU_LIST);
 			_this._DOM.find("li.btn").click(function(e){
+				e.stopPropagation();//停止冒泡
 				if(_this._DOM.find("li.active").index()==$(this).index()){
 					return false;
 				}
-				e.stopPropagation();//停止冒泡
 				$(this).addClass("active").siblings().removeClass("active");
 				dispatch(this,"com_li_click",{name:$(this).text(),index:$(this).index()});
 			});

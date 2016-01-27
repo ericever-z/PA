@@ -62,28 +62,38 @@ h4.lead {
 }
 
 .nxdc-kitchen {
+/**
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
+*/
 }
 
 .home-wrapper .img-bg {
-    margin-top: 185px;
+	position:relative;
+	max-width: 760px;
+	max-height: 460px;
+/*	**760X460 ****/
+	margin: 0 auto;
+	margin-top:60px;
+	transform: scale(0.75)
+	
+/*    margin-top: 185px;*/
 }
 
-.nxdc-kitchen .row {
-    position: absolute;
+.nxdc-kitchen>.row {
+    position: relative;
     width: 100%;
-    margin-top: 695px;
     text-align: center;
+	bottom: 5px;
 }
 
-.nxdc-kitchen .row .btn {
+.nxdc-kitchen>.row .btn {
     position: relative;
     border-radius: 200px;
     margin: 0 20px;
-    padding: 20px 75px;
+    padding: 8px 50px;
     font-size: 16px;
     background: #129fdd;
     border-color: #129fdd;
