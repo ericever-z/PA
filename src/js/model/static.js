@@ -34,6 +34,7 @@ define(function(){
 						{name:"进度条",part:"js-progressbar"},
 						{name:"图片查看器",part:"js-gallery"},
 						{name:"日期范围选择器",part:"js-daterangepicker"},
+						{name:"树状二维表",part:"js-treable"}
 					],		
 					[
 						{name:"概览",part:"overview"},

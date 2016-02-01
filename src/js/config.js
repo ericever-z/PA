@@ -31,7 +31,8 @@ require.config({
 		'vList2':'../../lib/NXDC/src/js/components/vList2',
 		'drop2':'../../lib/NXDC/src/js/components/drop2',
 		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
-		'moment':'../../lib/moment/moment.min'
+		'moment':'../../lib/moment/moment.min',
+		'treable':'../../lib/NXDC/src/js/components/treable'
     },
     shim:{
         'bootstrap':{
@@ -54,6 +55,9 @@ require.config({
 		},		
 		'daterangepicker':{
 			deps:['bootstrap', 'moment']
+		},
+		treable:{
+			deps:['bootstrap', 'tabs']
 		}
     }
 });
