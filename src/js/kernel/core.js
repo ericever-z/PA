@@ -17,9 +17,9 @@
 define(['note'],function(note){
 	var w = window;
 	w.inherit = function(proto){
-		function F(){};
-		F.prototype = proto;
-		return (new F());
+		function Pro(){};
+		Pro.prototype = proto;
+		return (new Pro());
 	};
 	w.extend = function(Child, Parent){
 		Child.prototype = inherit(Parent.prototype);
