@@ -1,3 +1,15 @@
+(function(){
+  if ( typeof window.CustomEvent === "function" ) return false;
+  function CustomEvent ( event, params ) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    var evt = document.createEvent( 'CustomEvent' );
+    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    return evt;
+   }
+  CustomEvent.prototype = window.Event.prototype;
+  window.CustomEvent = CustomEvent;
+}());
+
 /***
 **@Kernel {Class}
 ** 页面逻辑处理的核心基类
@@ -20,11 +32,9 @@ define(['note'],function(note){
 		try{
 			var evt = new Event(type,{bubbles:bub||true});
 		}catch(err){
-			evt = document.createEvent('Event');
-			evt.initEvent(type, bub||true,true);
+			evt = new CustomEvent("type",{bubbles:bub||true})
 		}
 		evt.data = data || {name:"unknow"};
-		console.log(evt);
 		ta.dispatchEvent(evt);
 	}
 	/***
