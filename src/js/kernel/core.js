@@ -17,7 +17,12 @@ define(['note'],function(note){
 	Event.prototype.data = {};//默认有一个
 	w.fireEvent = w.dispatch = function(ta,type,data,bub){
 		ta = ta || document;
-		var evt = new Event(type,{bubbles:bub||true});
+		try{
+			var evt = new Event(type,{bubbles:bub||true});
+		}catch(err){
+			evt = document.createEvent('Event');
+			evt.initEvent(type, bub||true);
+		}
 		evt.data = data || {name:"unknow"};
 		ta.dispatchEvent(evt);
 	}
