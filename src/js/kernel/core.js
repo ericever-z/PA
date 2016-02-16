@@ -16,11 +16,12 @@
 **/
 define(['note'],function(note){
 	var w = window;
-	w.inherit = Object.create || function(proto){
-		function F(){ };
-		F.prototype = proto;
-		return new F();
-	};
+	w.inherit = Object.create;
+//		|| function(proto){
+//		function F(){ };
+//		F.prototype = proto;
+//		return new F();
+//	};
 	w.extend = function(Child, Parent){
 		Child.prototype = inherit(Parent.prototype);
 		Child.prototype.constructor = Child;
