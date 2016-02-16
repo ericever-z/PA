@@ -29,6 +29,9 @@ define(['static'],function(Static){
 				}
 				$(this).addClass("active").siblings().removeClass("active");
 				dispatch(this,"com_li_click",{name:$(this).text(),index:$(this).index()});
+//				var evt = jQuery.Event("com_li_click",{data:{name:$(this).text(),index:$(this).index()}});
+//				evt.data = {name:$(this).text(),index:$(this).index()};
+//				$(this).trigger(evt);
 			});
 		};
 	}

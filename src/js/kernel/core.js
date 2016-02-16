@@ -21,9 +21,10 @@ define(['note'],function(note){
 			var evt = new Event(type,{bubbles:bub||true});
 		}catch(err){
 			evt = document.createEvent('Event');
-			evt.initEvent(type, bub||true);
+			evt.initEvent(type, bub||true,true);
 		}
 		evt.data = data || {name:"unknow"};
+		console.log(evt);
 		ta.dispatchEvent(evt);
 	}
 	/***

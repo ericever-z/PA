@@ -16,7 +16,7 @@ define(['./pieces/global-piece-header',
 			_this.children = [header,main];//获得 piece 实例的引用
 			$(document).on("com_li_click btn_dl_click",function(e){
 				_this.children.forEach(function(child){
-					child.update(e.originalEvent);
+					child.update(e.originalEvent||e);
 				});					
 			});
 			//监听来自网络层的消息
