@@ -19,7 +19,7 @@ define(['note'],function(note){
 	w.inherit = function(proto){
 		function F(){};
 		F.prototype = proto;
-		return new F;
+		return new F();
 	};
 	w.extend = function(Child, Parent){
 		Child.prototype = inherit(Parent.prototype);
