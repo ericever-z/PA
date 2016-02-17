@@ -15,7 +15,7 @@
 ** 页面逻辑处理的核心基类
 **/
 define(['note'],function(note){
-	window.inherit = Object.create || function(proto){
+	window.inherit = Object.create||function(proto){
 		function F(){ };
 		F.prototype = proto;
 		return new F();

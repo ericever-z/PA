@@ -12,7 +12,6 @@ define(['./home-sub-piece',
 		};
 		
 		this.update = function(msg){
-			console.log(msg);
             if(msg.type=="com_li_click" ||msg.type == "btn_dl_click"){
 				_this._DOM.toggleClass("nxdc-main-sec",msg.data.index>0?true:false);
             }			

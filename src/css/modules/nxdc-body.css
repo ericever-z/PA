@@ -31,6 +31,7 @@ h4.lead {
 .nxdc-main-sec {
     position: relative;
     height: calc(100% - 80px);
+	margin-top:-80px;
     /*	overflow-y: auto;*/
     /*	top:80px;*/
 }
@@ -48,6 +49,11 @@ h4.lead {
     overflow: hidden;
     text-align: center;
     transition: height 0.5s ease-in-out;
+}
+
+.nxdc-main-sec>.home-wrapper{
+	height: 0;
+	top: -80px;
 }
 
 

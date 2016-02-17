@@ -15,13 +15,13 @@ define(['./segs/seg-download'],function(dl){
 		};
 		
 		this.update = function(msg){
-            if(msg.type=="com_li_click" || msg.type == "btn_dl_click"){
-                if(msg.data.index > 0) {
-                    this._DOM.css("height",0);
-                }else{
-                    this._DOM.removeAttr("style");
-                }
-            }
+//            if(msg.type=="com_li_click" || msg.type == "btn_dl_click"){
+//                if(msg.data.index > 0) {
+//                    this._DOM.css("height",0);
+//                }else{
+//                    this._DOM.removeAttr("style");
+//                }
+//            }
 			_this.children.forEach(function(child){
 				child.update(msg);
 			});
