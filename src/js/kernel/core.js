@@ -32,7 +32,7 @@ define(['note'],function(note){
 		try{
 			var evt = new Event(type,{bubbles:bub||true});
 		}catch(err){
-			evt = new CustomEvent("type",{bubbles:bub||true})
+			evt = new CustomEvent(type,{bubbles:bub||true})
 		}
 		evt.data = data || {name:"unknow"};
 		ta.dispatchEvent(evt);

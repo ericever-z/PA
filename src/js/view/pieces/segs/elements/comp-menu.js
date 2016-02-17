@@ -23,12 +23,12 @@ define(['static'],function(Static){
 			_this._DOM = $("#nxdc-menu");
 			dom.init(_this._DOM,Static.MENU_LIST);
 			_this._DOM.find("li.btn").click(function(e){
-				e.stopPropagation();//停止冒泡
+				e.stopImmediatePropagation();
 				if(_this._DOM.find("li.active").index()==$(this).index()){
 					return false;
 				}
 				$(this).addClass("active").siblings().removeClass("active");
-				dispatch(this,"com_li_click",{name:$(this).text(),index:$(this).index()});
+				dispatch($(this).get(0),"com_li_click",{name:$(this).text(),index:$(this).index()});
 //				var evt = jQuery.Event("com_li_click",{data:{name:$(this).text(),index:$(this).index()}});
 //				evt.data = {name:$(this).text(),index:$(this).index()};
 //				$(this).trigger(evt);
