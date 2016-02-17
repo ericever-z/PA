@@ -15,20 +15,19 @@
 ** 页面逻辑处理的核心基类
 **/
 define(['note'],function(note){
-	var w = window;
-	w.inherit = Object.create;
+	window.inherit = Object.create;
 //		|| function(proto){
 //		function F(){ };
 //		F.prototype = proto;
 //		return new F();
 //	};
-	w.extend = function(Child, Parent){
+	window.extend = function(Child, Parent){
 		Child.prototype = inherit(Parent.prototype);
 		Child.prototype.constructor = Child;
 		Child.parent = Parent.prototype;
 	};
 	Event.prototype.data = {};//默认有一个
-	w.fireEvent = w.dispatch = function(ta,type,data,bub){
+	window.fireEvent = window.dispatch = function(ta,type,data,bub){
 		ta = ta || document;
 		try{
 			var evt = new Event(type,{bubbles:bub||true});
@@ -84,7 +83,7 @@ define(['note'],function(note){
 	** 主要功能： 启动应用，初始化，启动所需环境
 	** page 由一个或多个 piece 构成
 	**/
-	w.Page = function(){ arguments.callee._instance = this;};		
+	window.Page = function(){ arguments.callee._instance = this;};		
 	extend(Page,Base);
 	Page.notification  = {};
 	Page.prototype.startup = function(){
@@ -108,7 +107,7 @@ define(['note'],function(note){
 	** piece 由一个或多个子区域构成 或者 由一个或多个segment 片段构成 
 	** 一个piece  包含一个或多个业务集群
 	**/
-	w.Piece = function(){};
+	window.Piece = function(){};
 	extend(Piece,Base);
 	/**
 	**Piece  初始化
@@ -147,12 +146,12 @@ define(['note'],function(note){
 	** 一个segment 由一个或多个combine 或者 一个或多个component 构成
 	** 一个segment 只包含一个业务集群
 	**/
-	w.Segment = function(){};	
+	window.Segment = function(){};	
 	extend(Segment,Piece);	
 	/**
 	**@constructor {Class} Combine 组合
 	**一个组合 包含 多个【组件】或【元件组合】
 	**/
-	w.Combine = function(){};		
+	window.Combine = function(){};		
   	extend(Combine,Piece);		
 });
