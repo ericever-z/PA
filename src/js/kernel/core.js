@@ -15,12 +15,11 @@
 ** 页面逻辑处理的核心基类
 **/
 define(['note'],function(note){
-	window.inherit = Object.create;
-//		|| function(proto){
-//		function F(){ };
-//		F.prototype = proto;
-//		return new F();
-//	};
+	window.inherit = Object.create || function(proto){
+		function F(){ };
+		F.prototype = proto;
+		return new F();
+	};
 	window.extend = function(Child, Parent){
 		Child.prototype = inherit(Parent.prototype);
 		Child.prototype.constructor = Child;
