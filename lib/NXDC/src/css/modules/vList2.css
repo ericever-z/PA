@@ -115,7 +115,7 @@
   transition-duration: 0.5s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;		
 }
 
-.content-part>i.open-hide{
+.content-part.open-hide>i{
 	-moz-transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
