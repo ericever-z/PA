@@ -1,6 +1,3 @@
-
-
-
 .bs-example.bs-example2>.dropdown>.dropdown-menu{
 	position: absolute;
 	border-radius: 0;
@@ -9,6 +6,10 @@
 }
 .bs-example2>.dropdown.drop2-wrapper.open>.dropdown-menu{
 	display:block;
+}
+.dropdown>.dropdown-menu{
+	position: absolute;
+	border-radius: 0;	
 }
 
 .dropdown.drop2-wrapper button{

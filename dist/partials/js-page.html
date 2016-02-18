@@ -43,3 +43,25 @@ $("div.ndp-page-wrapper[name=drop-page]").page({
 		</code>
 	</pre>
 </div>
+<h4 class="lead">
+	分页--每页显示条数可自定义，下拉菜单
+</h4>
+<div class="bs-example">
+	<div class="ndp-page-wrapper" name="drop-page2"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class=&quot;ndp-page-wrapper&quot; name=&quot;drop-page2&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("div.ndp-page-wrapper[name=drop-page2]").page({
+	type:3,//1 普通，2 带显示条数，3，条数下拉菜单
+	totalItems:200,//总共有n条数据
+	perPage:10//每页默认显示10条
+});		
+		</code>
+	</pre>
+</div>

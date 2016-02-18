@@ -8,6 +8,12 @@ define(function(){
 			type:2,//1 普通，2 带显示条数
 			totalItems:200,//总共有n条数据
 			perPage:10//每页默认显示10条
+		});	
+		
+		$("div.ndp-page-wrapper[name=drop-page2]").page({
+			type:3,//1 普通，2 带显示条数，3 条数下拉菜单
+			totalItems:200,//总共有n条数据
+			perPage:10//每页默认显示10条
 		});		
 	}
 	return Demo;
