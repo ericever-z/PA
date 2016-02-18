@@ -55,11 +55,11 @@ ul.nav-tabs-cus>li>a{
 	border-radius: 0;
 }
 ul.nav.nav-tabs-cus>li.active>a{
-	border-top: 2px solid #fd9611;
+	border-top: 2px solid #fc7408;
 }
 ul.nav.nav-tabs-cus>li:not(.active)>a:hover {
     border-color: transparent;
-    color: #fd9611;
+    color: #fc7408;
 }
 
 ul.nav.nav-tabs-cus>li>a:focus, 
