@@ -16,8 +16,6 @@
 		background-color: white;
 }
 
-
-
 .ndp-table-wrapper[name='border'] .ndp-table-row{
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
@@ -26,11 +24,6 @@
 .ndp-table-wrapper[name='col'] .ndp-table-col:nth-child(n+2){
 	border-left: 1px solid #ccc;
 }
-
-.btn{
-	border-radius: 0;
-}
-
 
 div.ndp-tab-wrapper[name='vertical']>ul.nav.nav-tabs-cus>li{
 	width: 150px;
