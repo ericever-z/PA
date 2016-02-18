@@ -31,8 +31,8 @@ ul>li.page-item{
 	margin:0;
 	margin-right: 10px;
 	padding: 5px 10px;
-	border:1px solid #ddd;
-	color:#222;
+	border:1px solid #b9c3cd;
+	color:#666;
 	select-user:none;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -40,8 +40,9 @@ ul>li.page-item{
 	overflow: hidden;
 }
 li.page-item:hover{
-	background-color: #ddd;
-	border-color: #adacac;
+	background-color: #fff;
+	border-color: #fc7408;
+    color: #fc7408;
 }
 /***
 ** 最后一个 取消margin
@@ -56,14 +57,15 @@ ul.pagination>li.page-item{
 	border-radius: 0;
 }
 ul.pagination>li.page-item.active{
-	color:white;
-	background-color: #3e3e3e;
+	background-color: #fd9611;
+	border-color: #fd9611;
+    color: #fff;
 }
 ul.pagination>li[role].page-item.disabled{
 	cursor: not-allowed;
-	color:#b3b3b3;
-	background-color: #ececec;
-	border-color:#ddd;
+	color:#fff;
+	background-color: #d9e0e3;
+	border-color:#d9e0e3;
 }
 
 /******
@@ -96,15 +98,15 @@ span.page-drop-list{
 	border:1px solid transparent;
 	float: left;
 	width: 60px;
-	color:#818181;
+	color:#666;
 	margin: 0;
 	margin-right: 20px;
 	text-align: center;
 	height: 2.4em;
 }
 span.page-drop-list:hover{
-	border:1px solid #ddd;
-	background-color: #fbfbfb;
+	border:1px solid #b9c3cd;
+	background-color: #fff;
 }
 span.page-drop-list>i.glyphicon.active{
 	color:black;
@@ -136,19 +138,20 @@ ul.page-dropdown{
 	width: calc(100% + 2px);
 	left:-1px;
 	top:100%;
-	border:1px solid #ddd;
-	border-top-color:white;
-	background-color: white;
+	border:1px solid #b9c3cd;
+	border-top-color: #fff;
+	background-color: #fff;
 	z-index: 900;
 }
 ul.page-dropdown>li{
 	position: relative;
-	height: 25px;
+	height: 30px;
 	color:black;
-	line-height: 25px;
+	line-height: 30px;
 	user-select:none;
 	cursor: default;
 }
-ul.page-dropdown>li:hover{
-	background-color: #ddd;
+ul.page-dropdown>li:hover{    
+    color: #fd7611;
+	background-color: #f1f5f8;
 }
