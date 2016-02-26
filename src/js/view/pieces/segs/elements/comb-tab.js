@@ -13,12 +13,12 @@ define(['static','http','note',
 		'./demo-search','./demo-gallery',
 		'./demo-progressbar','./demo-vList2',
 	    './demo-drop2', './demo-daterangepicker',
-		'./demo-treable'],function(Static,http,note,dTable,
+		'./demo-treable','./demo-bubble'],function(Static,http,note,dTable,
 								dDrop,dPage,dBread,dTabs,
 								dSinput,dTip,dAlert,dConfirm,
 								dPrompt,dTree,dVL,dSearch,
 								dGallery,dProgressbar,dvList2,dDrop2, 
-								daterangepicker,treable){
+								daterangepicker,treable,dbubble){
 	var dom ={
 		concrate:function(hwdL,hwdC,arr){
 			var lis = '';
@@ -100,6 +100,9 @@ define(['static','http','note',
 							break;
 						case "treable":
 							treable();
+							break;
+						case "bubble":
+							dbubble();
 							break;
 					}
 					prettyPrint();//渲染 代码 

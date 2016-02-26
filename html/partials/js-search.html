@@ -1,5 +1,5 @@
 <div class="pa-header">
-<h2>搜索输入框</h2>
+<h2>搜索输入框<span class="js-specific">search.js</span></h2>
 </div>
 <h4 class="lead">
 	普通搜索输入框
@@ -46,7 +46,7 @@ $(".ndp-search-wrapper[name=disable]").search({
 
 
 <h4 class="lead">
-	搜索输入框--带范围选择
+	搜索输入框--前置下拉选项
 </h4>
 <div class="bs-example">
 		<div class="ndp-search-wrapper" name="mix"></div>
@@ -69,3 +69,61 @@ $(".ndp-search-wrapper[name=mix]").search({
 		</code>
 	</pre>
 </div>
+
+
+<h4 class="lead">
+	搜索输入框--即时搜索功能
+</h4>
+<div class="bs-example">
+		<div class="ndp-search-wrapper" name="plain2"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+&lt;div class="ndp-search-wrapper" name="plain2"&gt;&lt;/div&gt;		
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$(".ndp-search-wrapper[name=plain2]").search({
+	type:3,
+	dropList:[{text:"china"},{text:"USA"},{text:"德国"}],
+}).on("input_change",function(e){
+	console.log(e.originalEvent.data);
+}).on("do_search",function(e){
+	//用户输入内容，回车 或者点击搜索(放大镜) 触发这个事件
+	console.log(e.originalEvent.data);//数据
+});		
+		</code>
+	</pre>
+</div>
+
+<h4 class="lead">
+	搜索输入框--前置下拉选项+即时搜索
+</h4>
+<div class="bs-example">
+		<div class="ndp-search-wrapper" name="mixall" style="width:300px"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+&lt;div class="ndp-search-wrapper" name="mixall"&gt;&lt;/div&gt;		
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$(".ndp-search-wrapper[name=mixall]").search({
+	type:4,
+	dropList:["china","usa","world"],
+	dropList:[{text:"china"},{text:"USA"},{text:"德国"}],
+}).on("input_change",function(e){
+	console.log(e.originalEvent.data);
+}).on("do_search",function(e){
+	//用户输入内容，回车 或者点击搜索(放大镜) 触发这个事件
+	console.log(e.originalEvent.data);//数据
+});		
+		</code>
+	</pre>
+</div>
+
+

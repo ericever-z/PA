@@ -17,7 +17,9 @@ define(function(){
 				 {label:"美洲每周",icon:"<i class='glyphicon glyphicon-knight'></i>",
 				  sub:[
 						{label:"美国"},
-						{label:"加拿大"}
+						{label:"加拿大"},
+						{label:"巴西"},
+						{label:"阿根廷"}
 				 ]}					  
 				]
 			}).on("shrink_complete",function(){

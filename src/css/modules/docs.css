@@ -55,6 +55,14 @@ body {
   font-weight: normal;
 }
 
+.js-specific{
+	font-size: 28px;
+	color:#ccc;
+}
+.js-specific:before{
+	content:"\2014";
+	margin: 0 5px;
+}
 /* Outline button for use within the docs */
 .btn-outline {
   color: #563d7c;

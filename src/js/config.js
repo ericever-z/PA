@@ -32,7 +32,8 @@ require.config({
 		'drop2':'../../lib/NXDC/src/js/components/drop2',
 		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
 		'moment':'../../lib/moment/moment.min',
-		'treable':'../../lib/NXDC/src/js/components/treable'
+		'treable':'../../lib/NXDC/src/js/components/treable',
+		'bubble':'../../lib/NXDC/src/js/components/bubble'
     },
     shim:{
         'bootstrap':{
@@ -58,6 +59,9 @@ require.config({
 		},
 		treable:{
 			deps:['bootstrap', 'tabs']
-		}
+		},
+		bubble:{
+			deps:['bootstrap']
+		}		
     }
 });

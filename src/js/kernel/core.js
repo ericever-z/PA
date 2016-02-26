@@ -59,7 +59,11 @@ define(['note'],function(note){
 	/***
 	**@更新
 	**/
-	Base.prototype.update = function(){ };
+	Base.prototype.update = function(msg){
+		this.children.forEach(function(child){
+			if(child && child.update) child.update(msg);
+		});	
+	};
 	/**
 	**@湮灭
 	**/

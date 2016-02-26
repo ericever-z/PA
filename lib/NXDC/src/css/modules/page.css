@@ -31,8 +31,8 @@ ul>li.page-item{
 	margin:0;
 	margin-right: 10px;
 	padding: 5px 10px;
-	border:1px solid #b9c3cd;
-	color:#666;
+	border:1px solid #ddd;
+	color:#222;
 	select-user:none;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -40,9 +40,8 @@ ul>li.page-item{
 	overflow: hidden;
 }
 li.page-item:hover{
-	background-color: #fff;
-	border-color: #fc7408;
-    color: #fc7408;
+	background-color: #ddd;
+	border-color: #adacac;
 }
 /***
 ** 最后一个 取消margin
@@ -57,15 +56,14 @@ ul.pagination>li.page-item{
 	border-radius: 0;
 }
 ul.pagination>li.page-item.active{
-	background-color: #fd9611;
-	border-color: #fd9611;
-    color: #fff;
+	color:white;
+	background-color: #3e3e3e;
 }
 ul.pagination>li[role].page-item.disabled{
 	cursor: not-allowed;
-	color:#fff;
-	background-color: #d9e0e3;
-	border-color:#d9e0e3;
+	color:#b3b3b3;
+	background-color: #ececec;
+	border-color:#ddd;
 }
 
 /******
@@ -98,15 +96,15 @@ span.page-drop-list{
 	border:1px solid transparent;
 	float: left;
 	width: 60px;
-	color:#666;
+	color:#818181;
 	margin: 0;
 	margin-right: 20px;
 	text-align: center;
 	height: 2.4em;
 }
 span.page-drop-list:hover{
-	border:1px solid #b9c3cd;
-	background-color: #fff;
+	border:1px solid #ddd;
+	background-color: #fbfbfb;
 }
 span.page-drop-list>i.glyphicon.active{
 	color:black;
@@ -138,20 +136,67 @@ ul.page-dropdown{
 	width: calc(100% + 2px);
 	left:-1px;
 	top:100%;
-	border:1px solid #b9c3cd;
-	border-top-color: #fff;
-	background-color: #fff;
+	border:1px solid #ddd;
+	border-top-color:white;
+	background-color: white;
 	z-index: 900;
 }
 ul.page-dropdown>li{
 	position: relative;
-	height: 30px;
+	height: 25px;
 	color:black;
-	line-height: 30px;
+	line-height: 25px;
 	user-select:none;
 	cursor: default;
 }
-ul.page-dropdown>li:hover{    
-    color: #fd7611;
-	background-color: #f1f5f8;
+ul.page-dropdown>li:hover{
+	background-color: #ddd;
 }
+
+/***type 4**/
+.ndp-page-wrapper.special{
+	position: relative;
+	height: auto;
+}
+.ndp-page-wrapper.special>*{
+	position: relative;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border:1px solid #eee;
+	user-select:none;
+	-webkit-user-select:none;
+	cursor: pointer;
+}
+.ndp-page-wrapper.special>.pre-page,.ndp-page-wrapper.special[name]>.next-page{
+	width: 35%;
+}
+.ndp-page-wrapper.special>.pre-page:hover,.ndp-page-wrapper.special[name]>.next-page:hover{
+	background-color: #dbdbdb;
+}
+
+.ndp-page-wrapper.special>.drop-wrapper{
+	width: 30%;
+	border-width: 1px 0;
+}
+.ndp-page-wrapper.special>.drop-wrapper>ul{
+	position: absolute;
+	top:100%;
+	left: -1px;
+	width: calc(100% + 2px);
+	cursor: pointer;
+	max-height: 300px;
+	overflow: auto;
+	box-shadow: 0px 0 1px #e3e3e3;
+}
+
+.ndp-page-wrapper.special>.drop-wrapper>ul>li:hover{
+	background-color: #dfdfdf;
+}
+.ndp-page-wrapper.special>.drop-wrapper>ul>li.active{
+	background-color: #eeeeee;
+}
+
+
+

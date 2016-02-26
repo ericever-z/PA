@@ -14,7 +14,12 @@ define(function(){
 			type:3,//1 普通，2 带显示条数，3 条数下拉菜单
 			totalItems:200,//总共有n条数据
 			perPage:10//每页默认显示10条
-		});		
+		});
+		
+		$("div.ndp-page-wrapper[name=drop-page3]").page({
+			type:4,//4 类似微博翻页
+			totalPages:200,//总共有n条数据
+		});			
 	}
 	return Demo;
 });

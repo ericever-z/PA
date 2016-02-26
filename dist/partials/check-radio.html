@@ -1,0 +1,99 @@
+<div class="pa-header">
+<h3>checkbox/radio 用户自定义</h3>
+</div>
+<h5>默认样式</h5>
+<div class="bs-example">
+	<div class="ndp-tab-wrapper">
+		<dl>
+			<dd>
+				<input type="checkbox"  id="cus1">
+				<label for="cus1">选项1(多选)</label>				
+			</dd>
+			<dd>
+				<input type="checkbox"  id="cus2">
+				<label for="cus2">选项2(多选)</label>					
+			</dd>
+		</dl>
+		<dl>
+			<dd>
+				<input type="radio"  id="cus3" name="gp">
+				<label for="cus3">选项1222222</label>
+				<input type="radio"  id="cus4" name="gp">
+				<label for="cus4">选项2</label>											
+			</dd>			
+		</dl>
+	</div>	
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code>
+[type="checkbox"]{
+	display: none;
+}
+[type="checkbox"]+label:before{
+	position: absolute;
+	display: inline-block;
+	content:"";
+	width: 16px;
+    height: 16px;
+	padding-left: 0.5px;
+	line-height: 12px;
+ 	border:1px solid #b5b5b5;
+	border-radius: 3px;
+	bottom: 0;
+	margin: 0 -20px;
+	font-family: 'Glyphicons Halflings';
+}
+[type="checkbox"]+label:hover:before{
+	box-shadow: 0 0 2px #c1c1c1;
+}
+
+[type="checkbox"]:checked+label:before{
+	content:"\e013";/**** 对号 *****/
+	box-shadow: 0 0 0;
+	color:#7b7b7b;/**选中时的颜色***/
+}
+
+[type="checkbox"]+label{
+	position: relative;
+	left:20px;
+}
+/**** radio ****/
+[type="radio"]{
+	display: none;
+}
+[type="radio"]+label{
+	margin: 0 10px;
+}
+
+[type="radio"]+label:before{
+	position: absolute;
+	display: inline-block;
+	content:"";
+	font-family: 'Glyphicons Halflings';	
+	content:"";
+	width: 14px;
+    height: 14px;
+	border-radius: 50%;
+	line-height: 8px;
+	border:1px solid #ccc;
+	margin: 0 -18px;
+	margin-top:1px;
+	text-align: center;
+}
+[type="radio"]+label:hover:before{
+	box-shadow: 0 0 2px #c1c1c1;
+}
+[type="radio"]:checked+label:before{
+	content:"\2022"; /*** 选中时 里面的原点 ****/
+	font-size: 15px;
+	box-shadow: 0 0 0;
+	color:#7b7b7b;/**选中时的颜色***/
+}			
+		</code>
+	</pre>
+</div>
+<link rel="stylesheet" type="text/css" href=./css/pages/check-radio.css>
+<script type="text/javascript">
+	prettyPrint();//渲染 代码 
+</script>

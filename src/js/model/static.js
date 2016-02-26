@@ -34,7 +34,8 @@ define(function(){
 						{name:"进度条",part:"js-progressbar"},
 						{name:"图片查看器",part:"js-gallery"},
 						{name:"日期范围选择器",part:"js-daterangepicker"},
-						{name:"树状二维表",part:"js-treable"}
+						{name:"树状二维表",part:"js-treable"},
+						{name:"气泡",part:"js-bubble"}
 					],		
 					[
 						{name:"概览",part:"overview"},
@@ -42,7 +43,8 @@ define(function(){
 						{name:"按钮",part:"button"},
 						{name:"表格",part:"table"},
 						{name:"tabs",part:"tabs"},
-						{name:"分页",part:"page"}
+						{name:"分页",part:"page"},
+						{name:"单选/多选",part:"check-radio"}
 					],
 					[
 						{name:"示例网站1",part:"site1"},
