@@ -82,9 +82,15 @@ module.exports=function (grunt) {
 	grunt.task.registerTask("replace","just for fun",function(arg1,arg2){
 		grunt.file.recurse('html/',function(abspath, rootdir, subdir, filename){
 			var html = grunt.file.read('html/'+ (subdir?subdir+"/":"") +filename);
-			var one = html.replace(/href=\"(.+?)\.css\"/i,function(all,a){
-				return "href="+"./css/pages/"+filename.replace(/\.html/i,".css"); 
-			});
+			if(filename != "check-radio.html"){
+				var one = html.replace(/href=\"(.+?)\.css\"/i,function(all,a){
+					return "href="+"./css/pages/"+filename.replace(/\.html/i,".css"); 
+				});
+			}else{
+				one =  html.replace(/href=\"(.+?)\.css\"/i,function(all,ma){
+					return "href="+ma.slice(3);   
+				});				
+			}
 //			one = one.replace(/src=\"(.+?)require.js\"/i,function(all,b){ 
 //				return "src="+"'./lib/require.js'";  
 //			});
