@@ -1,6 +1,7 @@
 @import url(../../../lib/bootstrap/dist/css/bootstrap.min.css);
 @import url(../global/reset.css);
-@import url(../../../lib/NXDC/src/css/pages/nxdc.css);
+/*@import url(../../../lib/NXDC/src/css/pages/nxdc.css);*/
+@import url(../../../lib/NDPUI/dist/com/css/nxdc.min.css);
 @import url(../modules/nxdc-header.css);
 @import url(../modules/nxdc-body.css);
 @import url(../modules/nxdc-footer.css);

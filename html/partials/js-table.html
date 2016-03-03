@@ -16,8 +16,11 @@
 	<pre class="prettyprint">
 		<code class="language-js">
 $(".ndp-table-wrapper[name='plain-table']").table({
-	head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列"},
-	data:[
+	head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列"},//列表头数据，
+	//列表头的数据 支持 数组里面是字符串
+	//列如：head:{"第一列","第二列","第三列","第四列"}
+	//也支持 混排，字符串和{} 都有的形式， 下面的列表数据也是一样
+	data:[//列表数据，数据格式数组，数组里面可以是{}  也可以是字符串或者数字
 		{id:1101,name:"hello123",info:"hello -china 123",gender:"man"},
 		{id:1102,name:"hello_23",info:"hello - japan 34",gender:"woman"},
 		{id:1103,name:"hello_34",info:"hello - euro 23",gender:"no sign"}
@@ -158,3 +161,40 @@ $(".ndp-table-wrapper[name='solid-split-table']").table({
 	</code>
 	</pre>	
 </div>
+
+<h4 class="lead">
+	列表--更新列表数据
+</h4>
+<div class="bs-example">
+	<button class="btn btn-info" id="btn-update">点击更新列表数据</button>
+	<div class="ndp-table-wrapper" name="update"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+	<code>
+&lt;div class=&quot;ndp-table-wrapper&quot; name=&quot;update&quot;&gt;&lt;/div&gt;
+	</code>
+	</pre>
+	<pre class="prettyprint">
+	<code>
+var tb = $(".ndp-table-wrapper[name='update']").table({
+	head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列"},
+	data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man"},
+	{id:1102,name:"dllo_23",info:"clo - japan 34",gender:"woman"},
+	{id:1103,name:"hello_34",info:"allo - euro 23",gender:"no sign"},
+	{id:1104,name:"alo_35",info:"blo - japn",gender:"no sign"},
+	{id:1105,name:"bllo_36",info:"Alo - usa 23",gender:"woman"},
+	{id:1106,name:"clo_37",info:"Do - usa 23",gender:"man"},
+	{id:1107,name:"hello_38",info:"dllo - usa 23",gender:"man"}
+	]
+});	
+//点击按钮的回调
+$("button#btn-update").click(function(){
+	//data 新的数据
+	tb.update(data);
+});		
+	</code>
+	</pre>	
+</div>
+
+
