@@ -27,7 +27,10 @@ define(function(){
 							{label:"5-2-3"}							  
 					  ]}
 				]
-			});		
+			}).on("LEAF_CLICK",function(e){
+				//叶子节点被点击
+				console.log(e.originalEvent.data);//{val:叶子节点的值 string}
+			});			
 		
 			
 			$("div[name='icon-tree']").tree({
@@ -59,6 +62,9 @@ define(function(){
 				],
 				folder:"<i class='glyphicon glyphicon-folder-open'></i>",
 				file:"<i class='glyphicon glyphicon-file'></i>"
+			}).on("LEAF_CLICK",function(e){
+				//叶子节点被点击
+				console.log(e.originalEvent.data);//{val:叶子节点的值 string}
 			});			
 			
 			
@@ -92,6 +98,9 @@ define(function(){
 				folder:"<i class='glyphicon glyphicon-folder-open'></i>",
 				file:"<i class='glyphicon glyphicon-file'></i>",				
 				checkbox:true
+			}).on("LEAF_CHECK",function(e){
+				//被check
+				console.log(e.originalEvent.data);//{val:叶子节点的值 string,check:true|false  boolean 是否选中}
 			});		
 	};
 	return Demo;

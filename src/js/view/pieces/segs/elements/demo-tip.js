@@ -4,6 +4,8 @@ define(function(){
 			
 			showTip({
 				content:"您有一条信息的消息，请注意查收。截止当前时间，您的欠费金额为100元！（默认30秒消失）"
+			}).on("TIP_CLOSE",function(e){// tip 关闭事件，手动关闭，自动关闭都触发
+					console.log("tip 关闭");
 			});
 			
 		});
@@ -15,6 +17,8 @@ define(function(){
 				content:"警告！您返回数据出错，请检查参数。截止当前时间，您的欠费金额为100元！",
 				icon:"<i class='glyphicon glyphicon-alert'></i>",
 				close:true
+			}).on("TIP_CLOSE",function(e){
+					console.log("tip 关闭");
 			});
 			
 		});

@@ -27,6 +27,8 @@ define(function(){
 					{label:"5-2-3"}							  
 			  ]}
 			]
+		}).on("ITEM_CLICK",function(e){//点击下拉下拉列表的一项
+				console.log(e.originalEvent.data);//{val:选中的叶子节点值 string}
 		});
 		
 		$(".ndp-vList-wrapper[name=icon]").vList({
@@ -57,6 +59,8 @@ define(function(){
 			  ]}
 			],
 			leaficon:"<i class='glyphicon glyphicon-list-alt'></i>"
+		}).on("ITEM_CLICK",function(e){//点击下拉下拉列表的一项
+				console.log(e.originalEvent.data);//{val:选中的叶子节点值 string}
 		});		
 		
 	};

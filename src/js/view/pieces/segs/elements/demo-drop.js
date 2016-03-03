@@ -2,7 +2,12 @@ define(function(){
 	function Demo(){
             $("div.ndp-drop-wrapper[name=inline-drop]").drop({
                 data:["亚洲","欧洲","美洲","大洋洲","南极洲"]
-            });
+            }).on("ITEM_CLICK",function(e){
+				//下拉选择项点击事件
+				//返回的数据有  data = {val:选中项的值,deep:深度(如果是多级) }
+				console.log(e.originalEvent.data);
+			});
+		
             $("div.ndp-drop-wrapper[name=tree-drop]").drop({
                 data:[{text:"新疆"},
 					  {text:"陕西",sub:[{text:"西安"},
@@ -15,7 +20,11 @@ define(function(){
 					  {text:"湖北"},
 					  {text:"湖南"}],
 				caret:"glyphicon-menu-right"
-            });  
+            }).on("ITEM_CLICK",function(e){//下拉菜单一个选项被点击了
+				console.log(e.originalEvent.data);
+			}).val("新疆"); //设置 显示在input 里面的值
+		
+		
             $("div.ndp-drop-wrapper[name=group-drop]").drop({
 				type:3,
                 data:[

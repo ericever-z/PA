@@ -10,10 +10,12 @@ define(function(){
 					  {label:"接触绑定"},
 					  {label:"退出"}
 					 ]
+			}).on("ITEM_CLICK",function(e){
+				//下拉选项被点击
+				console.log(e.originalEvent.data);//{value:选中的值 string}
 			});
 			
-			
-			
+		
 			$(".dropdown[name='bb']").drop2({
 				id:"meme2",
 				caret:"<i class='glyphicon glyphicon-menu-down'></i>",
@@ -32,9 +34,26 @@ define(function(){
 						  {label:"中国3"}
 					  ]}
 					 ]
-			}).on("item_click",function(e,data){
-				console.log(data);
+			}).on("ITEM_CLICK",function(e){
+				console.log(e.originalEvent.data); //{value:选中的值 string}
 			});
+		
+		
+			$(".dropdown.drop2-wrapper[name='bbc']").drop2({
+				id:"meme3",
+				caret:"<i class='glyphicon glyphicon-menu-down'></i>",//下拉三角形的图标
+				label:"<i class='glyphicon glyphicon-th-list'></i>",//显示的图标
+				data:[
+					{label:"用户设置"},
+					{label:"修改密码"},
+					{label:"接触绑定"},
+					{label:"退出"}
+				]
+			}).on("ITEM_CLICK",function(e){
+				//下拉选项被点击
+				console.log(e.originalEvent.data);//{value:选中的值 string}
+			});
+		
 		
 			$(".dropdown.drop2-wrapper[name='cc']").drop2({
 				type:2,
@@ -47,9 +66,9 @@ define(function(){
 					  {label:"接触绑定"},
 					  {label:"退出"}
 					 ]
-			}).on("item_click",function(e,data){
-				console.log(data);
-			});		
+			}).on("SELECT_CHANGE",function(e){
+				console.log(e.originalEvent.data);
+			}).val("修改密码");			
 	}
 	return Demo;
 });

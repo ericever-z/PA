@@ -1,13 +1,18 @@
 define(function(){
 	function Demo(){
 			$("button.btn-primary").click(function(){
-				$("#prompt-holder").prompt({
-					
+				showPrompt({					
+					onOk:function(){//点击确认按钮
+						console.log("点击了ok按钮");
+					},
+					onCancel:function(){//点击x 或者取消按钮
+						console.log("点击了 取消 按钮");
+					}
 				});
 			});
 			
 			$("button.btn-warning").click(function(){
-				$("#prompt-holder").prompt({
+				showPrompt({
 					title:"登陆",
 					body:function(body,wrapper){
 						//DOM构建
@@ -32,16 +37,20 @@ define(function(){
 						footer.addClass("footer-login");
 					},
 					btnOK:"登陆",
-					btnCANCAEL:"取消"
-				}).on("click_ok",function(){
-					console.log();
+					btnCANCAEL:"取消",
+					onOk:function(){//点击确认按钮
+						console.log("点击了ok按钮");
+					},
+					onCancel:function(){//点击x 或者取消按钮
+						console.log("点击了 取消 按钮");
+					}
 				});
 			});
 			
 			
 			//个人信息表单
 			$("button.btn-success").click(function(e){
-				$("#prompt-holder").prompt({
+				showPrompt({
 					title:"个人信息",
 					body:function(body,wrapper){
 						var form = $("<form class='form-horizontal' />");
@@ -95,7 +104,7 @@ define(function(){
 			
 			//复杂表单
 			$("button.btn-danger").click(function(e){
-			$("#prompt-holder").prompt({
+			showPrompt({
 					title:"<i class='glyphicon glyphicon-home'></i>&nbsp;复杂表单",
 					body:function(body){
 						body.addClass("body-fixed-height");

@@ -37,15 +37,22 @@ define(function(){
 				  {id:1103,name:"hello_34",info:"hello - euro 23",gender:"no sign"}],
 			rowNail:true,//允许选中行
 			activeRow:1//默认选中的行索引，base 0
+		}).on("ROW_CLICK",function(e){//行被点击
+				console.log(e.originalEvent.data);// {row：第几行 int}//第几行
 		});
+		
 		$(".ndp-table-wrapper[name='solid-col-table']").table({
 			head:["第一列","第二列","第三列","第四列"],
 			data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man"},
 				  {id:1102,name:"hello_23",info:"hello - japan 34",gender:"woman"},
 				  {id:1103,name:"hello_34",info:"hello - euro 23",gender:"no sign"}],
-			colNail:true,//允许选中行
-			activeCol:1//默认选中的行索引，base 0
+			colNail:true,//允许选中列
+			activeCol:1//默认选中的列索引，base 0
+		}).on("COL_CLICK",function(e){//列被点击
+			console.log(e.originalEvent.data); //{col:第几列 int ,name: 列名 string}
 		});
+		
+		
 		$(".ndp-table-wrapper[name='solid-h-table']").table({
 			head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列"},
 			data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man"},
@@ -58,6 +65,7 @@ define(function(){
 			],
 			listHeight:"250px"
 		});	
+		
 		$(".ndp-table-wrapper[name='solid-sort-table']").table({
 			head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列",col5:"第五列"},
 			data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man",nation:"USA"},
@@ -69,7 +77,11 @@ define(function(){
 			{id:1107,name:"hello_38",info:"dllo - usa 23",gender:"man",nation:"USA"}
 			],								
 			sort:[1,3,4]//按照第一列，第三列，第四列排序，这三列会出现排序按钮，全部排序 sort:"All"
+		}).on("SORT_CHANGE",function(e){
+				//用户点击排序
+			console.log(e.originalEvent.data);//{col:第几列（from 0）int， name:列名 字符串}
 		});
+		
 		$(".ndp-table-wrapper[name='solid-split-table']").table({
 			head:{col1:"第一列",col2:"第二列",col3:"第三列",col4:"第四列",col5:"第五列"},
 			data:[{id:1101,name:"hello123",info:"hello -china 123",gender:"man",nation:"USA"},
