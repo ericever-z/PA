@@ -44,7 +44,8 @@ define(function(){
 						{name:"表格",part:"table"},
 						{name:"tabs",part:"tabs"},
 						{name:"分页",part:"page"},
-						{name:"单选/多选",part:"check-radio"}
+						{name:"单选/多选",part:"check-radio"},
+						{name:"静态表单",part:"form"}
 					],
 					[
 						{name:"示例网站1",part:"site1"},
