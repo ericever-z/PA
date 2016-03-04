@@ -1,7 +1,8 @@
 define(function(){
 	function Demo(){
             $("div.ndp-drop-wrapper[name=inline-drop]").drop({
-                data:["亚洲","欧洲","美洲","大洋洲","南极洲"]
+                data:["亚洲","欧洲","美洲","大洋洲","南极洲"],
+				name:"country"//为了方便serialize 建议设置name 属性
             }).on("ITEM_CLICK",function(e){
 				//下拉选择项点击事件
 				//返回的数据有  data = {val:选中项的值,deep:深度(如果是多级) }

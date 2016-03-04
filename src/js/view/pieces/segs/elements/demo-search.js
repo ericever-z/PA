@@ -1,7 +1,8 @@
 define(function(){
 	function Demo(){
 			$(".ndp-search-wrapper[name=plain]").search({
-				placeholder:"请输入字符"
+				placeholder:"请输入字符",
+				name:"username"//为了方便serialize 建议设置name 属性
 			}).val("hello");//设置input 显示的值;
 			
 			$(".ndp-search-wrapper[name=disable]").search({

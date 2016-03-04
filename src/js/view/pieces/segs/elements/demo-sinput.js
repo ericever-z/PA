@@ -2,6 +2,7 @@ define(function(){
 	function Demo(){
 			$("div.ndp-sinput-wrapper[name=plain-sinput]").sinput({
 				placeholder:"请输入",
+				name:"password",//为了方便serialize 建议设置name 属性
 				default:"hello world"// 默认显示在 input 中字符串
 			});	
 			
@@ -40,6 +41,7 @@ define(function(){
 			
 			$("div.ndp-sinput-wrapper[name=plain-pwd]").sinput({	
 				inputType:"password",
+				name:"pwd",//为了方便serialize 建议设置name 属性
 				xion:'<span class="switcher"><label><input type="checkbox" class="scheckbox"></label></span>',
 				default:"1we232ertt"
 			});	

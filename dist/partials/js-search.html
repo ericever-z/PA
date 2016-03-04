@@ -16,7 +16,8 @@
 	<pre class="prettyprint">
 		<code class="language-js">
 $(".ndp-search-wrapper[name=plain]").search({
-	placeholder:"请输入字符"
+	placeholder:"请输入字符",
+	name:"password"//为了方便serialize 建议设置name 属性
 }).val("hello");//设置input 显示的值;;		
 		</code>
 	</pre>

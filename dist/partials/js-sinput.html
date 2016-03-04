@@ -17,6 +17,7 @@
 		<code class="language-js">
 $("div.ndp-sinput-wrapper[name=plain-sinput]").sinput({
 	placeholder:"请输入",
+	name:"username",//为了方便serialize 建议设置name 属性
 	default:"hello world"// 默认显示在 input 中字符串
 });	
 		</code>
@@ -130,6 +131,7 @@ $("div.ndp-sinput-wrapper[name=stepper]").sinput({
 		<code class="language-js">
 $("div.ndp-sinput-wrapper[name=plain-pwd]").sinput({	
 	inputType:"password",
+	name:"pwd",//为了方便serialize 建议设置name 属性
 	xion:'&lt;span class="switcher"&gt;&lt;label&lt;&lt;input type="checkbox" class="scheckbox"&gt;&lt;/label&gt;&lt;/span&gt;'
 });	
 		</code>
