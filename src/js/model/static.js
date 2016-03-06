@@ -35,7 +35,8 @@ define(function(){
 						{name:"图片查看器",part:"js-gallery"},
 						{name:"日期范围选择器",part:"js-daterangepicker"},
 						{name:"树状二维表",part:"js-treable"},
-						{name:"气泡",part:"js-bubble"}
+						{name:"气泡",part:"js-bubble"},
+						{name:"文件上传",part:"js-upload"}
 					],		
 					[
 						{name:"概览",part:"overview"},
