@@ -10,7 +10,15 @@
     echo "<br>";
     echo exec("git clean -f");
     echo "<br>";
-    echo exec("git --git-dir=/home/uikit/.git pull");
+    echo exec("git pull");
+    echo "<br>";
+    echo exec("git pull");
+    echo "<br>";
+    echo exec("git pull");
+    echo "<br>";
+    echo exec("git pull");
+    echo "<br>";
+    echo exec("git pull");
     echo "<br>";
     echo "Changing permissions...";
     echo "<br>";
