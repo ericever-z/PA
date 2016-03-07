@@ -1,9 +1,8 @@
 define(function() {
-    function Demo () {
-        var fu = new FileUpload({
-            container: $('.upload-container'),
+    function Demo() {
+        $('.upload-container').fileupload({
             ajax: {
-                url: './upload.php'
+                url: '/upload.php'
             },
             allowSize: [],
             type: 'image'
