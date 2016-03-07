@@ -35,7 +35,7 @@ require.config({
 		
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
 		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
-		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
+		'upload':'../../lib/NDPUI/dist/com/splitjs/upload'
     },
     shim:{
         'bootstrap':{
