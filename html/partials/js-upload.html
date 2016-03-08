@@ -11,14 +11,13 @@
 <div class="highlight">
     <pre class="prettyprint">
 		<code class="language-js">
-		var fu = new FileUpload({
-            container: $('.upload-container'),
+		$('.upload-container').fileupload({
             ajax: {
                 url: './upload.php'
             },
             allowSize: [],
-            type: 'image'
-        });
+            type: 'image'			
+		});
 		</code>
 	</pre>
 </div>

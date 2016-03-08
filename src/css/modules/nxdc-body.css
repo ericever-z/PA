@@ -23,6 +23,32 @@ h4.lead {
     top: 0;
 }
 
+/***
+树状二维表2  特殊处理
+***/
+.doc-html-wrapper{
+	position: relative;
+	width: 100%;
+	height: 550px;
+	overflow-x:auto;
+	margin-bottom: 20px;
+}
+.doc-html-wrapper.fold{
+	height: 200px;
+	padding-top:0;
+}
+
+.doc-html-wrapper>.ndp-sutable-wrapper{
+	position: absolute;
+	margin-left: -21%;
+	margin-top:-12.5%;
+	transform: scale(0.70);
+}
+
+.doc-html-wrapper.fold>.ndp-sutable-wrapper{
+	margin-top:-10px;
+	border-top:1px solid black;
+}
 
 /***
 **

@@ -34,6 +34,7 @@ require.config({
 		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
 		
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
+		'sutable':'../../lib/NDPUI/dist/com/splitjs/sutable',
 		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload'
     },
