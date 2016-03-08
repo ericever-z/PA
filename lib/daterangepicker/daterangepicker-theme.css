@@ -132,42 +132,48 @@
 
 /*  Larger Screen Styling */
 
-/* opensnxdc */ 
-/*.daterangepicker.opensleft:before {
-  position: absolute;
-  top: -7px;
-  right: 9px;
-  display: inline-block;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
-  border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  content: '';
-}
 
-.daterangepicker.opensleft:after {
-  position: absolute;
-  top: -6px;
-  right: 10px;
-  display: inline-block;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #fff;
-  border-left: 6px solid transparent;
-  content: '';
-}*/
+/* opensnxdc-mulitple */
 
-.daterangepicker.opensnxdc .daterangepicker_input{
+.daterangepicker.opensnxdc-mulitple .daterangepicker_input {
     display: none;
 }
-.daterangepicker.opensnxdc .ranges {
+
+.daterangepicker.opensnxdc-mulitple .ranges {
     float: none;
 }
-.daterangepicker.opensnxdc .ranges ul {
+
+.daterangepicker.opensnxdc-mulitple .ranges ul {
     width: 100%;
     display: flex;
     justify-content: left;
     clear: both;
 }
-.daterangepicker.opensnxdc .ranges ul li {
-    
+
+.daterangepicker.opensnxdc-mulitple .ranges ul li {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.daterangepicker.opensnxdc-mulitple .ranges ul li:last-of-type {
+    display: none;
+}
+
+
+/* opensnxdc-single */
+
+.daterangepicker.opensnxdc-single .daterangepicker_input >:not(.calendar-time) {
+    display: none;
+}
+
+.daterangepicker.opensnxdc-single .ranges {
+    float: none;
+}
+
+.daterangepicker.opensnxdc-single .applyBtn {
+    width: 100%;
+}
+
+.daterangepicker.opensnxdc-single .cancelBtn {
+    display: none;
 }
