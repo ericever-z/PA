@@ -23,6 +23,7 @@
     echo "Changing permissions...";
     echo "<br>";
     echo exec("chown -R www *");
+    echo exec("chown -R www:www .git");
     echo "<br>";
     echo "Finished";
 ?>
