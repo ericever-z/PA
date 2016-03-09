@@ -36,6 +36,7 @@ define(function(){
 						{name:"日期范围选择器",part:"js-daterangepicker"},
 						{name:"树状二维表",part:"js-treable"},
 						{name:"树状二维表2",part:"js-sutable"},
+						{name:"时间范围选择器",part:"js-timerange"},
 						{name:"气泡",part:"js-bubble"},
 						{name:"文件上传",part:"js-upload"}
 					],		

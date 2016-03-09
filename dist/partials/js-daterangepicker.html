@@ -28,8 +28,92 @@ $('.daterangepicker-sample').daterangepicker({
     "startDate": "01/20/2016",
     "endDate": "01/26/2016"
 }, function(start, end, label) {
-  	console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 });
 		</code>
 	</pre>
+</div>
+<h4 class="lead">
+    时间段选择
+</h4>
+<div class="bs-example">
+    <input type='text' class="daterangepicker-sample1 form-control">
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+        <code class="language-js">
+&lt;input type='text' class="daterangepicker-sample1 form-control" &gt;          
+        </code>
+    </pre>
+    <pre class="prettyprint">
+        <code class="language-js">          
+ $('.daterangepicker-sample1').daterangepicker({
+            "ranges": range,
+            "startDate": "01/20/2016",
+            "endDate": "01/26/2016",
+            "opens": "nxdc",
+            "alwaysShowCalendars": true,
+            locale: {
+                "applyLabel": "OK",
+                "cancelLabel": '',
+            },
+            autoApply: true
+        }, function(start, end, label) {           
+        });
+        </code>
+    </pre>
+</div>
+<h4 class="lead">
+    单个日期
+</h4>
+<div class="bs-example">
+    <input type='text' class="daterangepicker-sample2 form-control">
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+        <code class="language-js">
+&lt;input type='text' class="daterangepicker-sample2 form-control" &gt;          
+        </code>
+    </pre>
+    <pre class="prettyprint">
+        <code class="language-js">          
+$('.daterangepicker-sample2').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true
+        },
+        function(start, end, label) {
+
+        });
+        </code>
+    </pre>
+</div>
+<h4 class="lead">
+    单个日期（含时分秒）
+</h4>
+<div class="bs-example">
+    <input type='text' class="daterangepicker-sample3 form-control">
+</div>
+<div class="highlight">
+    <pre class="prettyprint">
+        <code class="language-js">
+&lt;input type='text' class="daterangepicker-sample3 form-control" &gt;          
+        </code>
+    </pre>
+    <pre class="prettyprint">
+        <code class="language-js">          
+ $('.daterangepicker-sample3').daterangepicker({
+                "singleDatePicker": true,
+                "showDropdowns": true,
+                "opens": "nxdc-single",
+                "timePicker": true,
+                "timePicker24Hour": true,
+                "timePickerSeconds": true,
+                locale: {
+                    format: 'MM/DD/YYYY h:mm A'
+                }
+            },
+            function(start, end, label) {
+
+            });
+        </code>
+    </pre>
 </div>

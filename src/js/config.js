@@ -36,6 +36,7 @@ require.config({
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
 		'sutable':'../../lib/NDPUI/dist/com/splitjs/sutable',
 		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
+		'timerange':'../../lib/NDPUI/dist/com/splitjs/timerange',
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload'
     },
     shim:{
@@ -65,6 +66,9 @@ require.config({
 		},
 		bubble:{
 			deps:['bootstrap']
-		}		
+		},
+		timerange:{
+			deps:['drop']
+		}
     }
 });
