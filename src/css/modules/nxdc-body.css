@@ -1,3 +1,14 @@
+.bs-example.bs-example-normal:after{
+	content:"example--正常";	
+}
+
+.bs-example.bs-example-alert:after{
+	content:"example--提示";	
+}
+.bs-example.bs-example-warning:after{
+	content:"example--告警";	
+}
+
 .pa-header {
     margin: 0;
     padding: 0;
