@@ -49,7 +49,13 @@ module.exports=function (grunt) {
              dest: 'dist/fonts/',
              flatten: true,
              filter: 'isFile'
-            },      
+            }, 
+            {expand: true,
+             src: (ske.type==1)?['src/css/*font*/*.*','lib/**/*font*/*.*']:['css/fonts/*.*','lib/**/*font*/*.*'],
+             dest: 'dist/css/fonts/',
+             flatten: true,
+             filter: 'isFile'
+            }, 				
             {//图片
                 expand: true,
                 cwd: (ske.type==1)?'src/imgs/':'imgs/',
@@ -88,7 +94,7 @@ module.exports=function (grunt) {
 				});
 			}else{
 				one =  html.replace(/href=\"(.+?)\.css\"/i,function(all,ma){
-					return "href="+ma.slice(3);   
+					return "href="+ma.slice(3) + ".css";   
 				});				
 			}
 //			one = one.replace(/src=\"(.+?)require.js\"/i,function(all,b){ 

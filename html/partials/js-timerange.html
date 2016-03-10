@@ -6,6 +6,7 @@
 </h4>
 <p class="bg-warning" style="padding:10px;">timerange 依赖 drop 插件的支持，请使用前加载好相关依赖</p>
 <div class="bs-example">
+	<button class="btn btn-info" style="margin:10px;" id="data">先选择，然后点击这里输出数据</button>
 	<div class="ndp-timerange-wrapper" name="plain-tab"></div>
 </div>
 <div class="highlight">
@@ -16,9 +17,13 @@
 	</pre>
 	<pre class="prettyprint">
 		<code class="language-js">
-$(".ndp-timerange-wrapper").timerange({
+var the = $(".ndp-timerange-wrapper").timerange({
 	lan:"en"// 中英文 "en", "cn"
 });
+
+the.getVal();// 获得选取的数据   数据格式如下
+//[{},{}]  {timeStart:"开始时间"，timeEnd:结束时间,day:星期几,zone:{text:描述 value:值}} 		
+	
 		</code>
 	</pre>
 </div>
