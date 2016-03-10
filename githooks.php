@@ -1,11 +1,12 @@
 <?php
     error_reporting ( E_ALL );
-    echo exec("git status");
-    echo exec("git reset --hard");
-    echo exec("git clean -f -d");
-    echo exec("git pull");
-    echo exec("chown -R www *");
-    echo exec("chown -R www:www .git");
-    $arr = array ('msg'=>'request received!');
+    $msg = '';
+    $msg += exec("git status 2>&1");
+    $msg += exec("git reset --hard 2>&1");
+    $msg += exec("git clean -f -d 2>&1");
+    $msg += exec("git pull 2>&1");
+    $msg += exec("chown -R www * 2>&1");
+    $msg += exec("chown -R www:www .git 2>&1");
+    $arr = array ('msg'=>$msg);
     echo json_encode($arr);
 ?>
