@@ -14,13 +14,14 @@ define(['static','http','note',
 		'./demo-progressbar','./demo-vList2',
 	    './demo-drop2', './demo-daterangepicker',
 		'./demo-treable','./demo-bubble',
-		'./demo-upload','./demo-sutable','./demo-timerange'],function(Static,http,note,dTable,
+		'./demo-upload','./demo-sutable',
+		'./demo-timerange','./demo-blend'],function(Static,http,note,dTable,
 								dDrop,dPage,dBread,dTabs,
 								dSinput,dTip,dAlert,dConfirm,
 								dPrompt,dTree,dVL,dSearch,
 								dGallery,dProgressbar,dvList2,dDrop2, 
 								daterangepicker,treable,dbubble,
-							    upload,sutable,timerange){
+							    upload,sutable,timerange,blend){
 	var dom ={
 		concrate:function(hwdL,hwdC,arr){
 			var lis = '';
@@ -114,6 +115,9 @@ define(['static','http','note',
 							break;
 						case "timerange":
 							timerange();
+							break;
+						case "blend":
+							  blend();	
 							break;
 					}
 					prettyPrint();//渲染 代码 

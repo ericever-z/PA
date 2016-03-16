@@ -37,7 +37,9 @@ require.config({
 		'sutable':'../../lib/NDPUI/dist/com/splitjs/sutable',
 		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
 		'timerange':'../../lib/NDPUI/dist/com/splitjs/timerange',
-		'upload':'../../lib/NDPUI/dist/com/splitjs/upload'
+		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
+		'vList3':'../../lib/NDPUI/dist/com/splitjs/vList3',
+		'blend':'../../lib/NDPUI/dist/com/splitjs/blend'
     },
     shim:{
         'bootstrap':{
@@ -69,6 +71,12 @@ require.config({
 		},
 		timerange:{
 			deps:['drop']
+		},
+		vList3:{
+			deps:['search']
+		},
+		blend:{
+			deps:['vList3','bread']
 		}
     }
 });
