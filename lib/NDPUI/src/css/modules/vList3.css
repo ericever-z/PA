@@ -53,7 +53,8 @@
 }
 
 
-.ndp-vList3-wrapper.search-mode{
+.ndp-vList3-wrapper.blend-search-drop.search-mode{
+	position: relative;
 	height: 300px;
 	overflow: hidden;
 }
@@ -67,7 +68,15 @@
 	z-index: 100;
 	background-color: white;
 	overflow: auto;
+	overflow-x: hidden;
 }
+
+.ndp-vList3-wrapper .tree-area{
+	max-height: 295px;
+	overflow: auto;
+	background-color: #fff;
+}
+
 .ndp-vList3-wrapper .search-panel:before{
 	position: absolute;
 	font-family: 'Glyphicons Halflings';
@@ -79,7 +88,7 @@
 }
 .ndp-vList3-wrapper .search-panel:after{
 	position: absolute;
-	content:"按照个人主页中所列主页进行索索";
+	content:attr(data-content);
 	top: 70%;
 	left:33%;
 	color:#b9c3cd;
@@ -101,7 +110,7 @@
 
 .ndp-vList3-wrapper li[deep]>span.list-txt-wrapper>.aud-size{
 	position: absolute;
-	right: 20px;
+	right: 50px;
 }
 
 
@@ -130,6 +139,11 @@
 	font-style:normal;
 }
 
+.ndp-vList3-wrapper li[deep]>span.list-txt-wrapper>.v-search{
+	position: absolute;
+	right: 10px;
+	line-height: 40px;
+}
 /*****
 **
 ****/

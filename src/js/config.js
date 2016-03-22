@@ -31,6 +31,7 @@ require.config({
 		'progressbar':'../../lib/NDPUI/dist/com/splitjs/progressbar',
 		'vList2':'../../lib/NDPUI/dist/com/splitjs/vList2',
 		'drop2':'../../lib/NDPUI/dist/com/splitjs/drop2',
+		'drop3':'../../lib/NDPUI/dist/com/splitjs/drop3',
 		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
 		
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
@@ -76,7 +77,7 @@ require.config({
 			deps:['search']
 		},
 		blend:{
-			deps:['vList3','bread','drop']
+			deps:['vList3','bread','drop3']
 		}
     }
 });
