@@ -302,3 +302,13 @@ div.ndp-search-wrapper[name="mix"] {
 .bs-example.bs-example2 {
     min-height: 100px;
 }
+/****
+**
+*****/
+.temp-window{
+	position: relative;
+	width: 600px;
+	height: 400px;
+	margin-left: 200px;
+	margin-top:-40px;
+}

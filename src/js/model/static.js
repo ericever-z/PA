@@ -23,7 +23,7 @@ define(function(){
 						{name:"面包屑",part:"js-bread"},
 						{name:"Tabs",part:"js-tabs"},
 						{name:"Tip",part:"js-tip"},
-						{name:"文本输入框",part:"js-sinput"},
+//						{name:"文本输入框",part:"js-sinput"},
 						{name:"对话框Alert",part:"js-alert"},
 						{name:"对话框confirm",part:"js-confirm"},
 						{name:"对话框prompt",part:"js-prompt"},
