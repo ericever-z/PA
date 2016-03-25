@@ -11,12 +11,38 @@
 <div class="highlight">
     <pre class="prettyprint">
 		<code class="language-js">
+        //以下的配置项，需要那个改那个
+        //不需要的就不管了
 $('.upload-container').fileupload({
             //以下是上传处理的ajax
             //所有的参数参照jquery
-            allowSize: [],
-            type: 'image'			
-		});
+            ajax: {
+                url: 'xxx',
+                data: 'xxx'
+            },
+            //上传文件的翻译，或者文本提醒
+            text: {
+                upload: {
+                    uploading: '正在上传',
+                    success: '添加成功',
+                    tips: '文件拖放到这里',
+                    linkword: '或者',
+                    descUploading: '上传中',
+                    descButton: '上传',
+                    agButton: '重新上传'
+                },
+                error: {
+                    type: '文件类型不正确',
+                    size: '文件大小超过限制',
+                    number: '文件数超过一个',
+                    none: '没有要上传的文件',
+                    allowSize: '宽高尺寸有问题'
+                }
+            },
+            //这里是上传按钮
+            //如果有,则给按钮绑定上传事件，当按钮点击时则上传
+            //如果没有，则拖放后立即上传
+            button: false,
             name: 'file',   //上传拖拽区域的字段
             type: 'image',  //上传文件的类型
             width: 560,     //上传拖拽区域宽度
