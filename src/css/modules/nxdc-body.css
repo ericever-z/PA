@@ -24,6 +24,18 @@ h4.lead {
     margin-top: 0;
 }
 
+
+@media (min-width: 1440px){
+	.container{
+		width:1280px;
+	}	
+}
+@media (min-width: 1200px){
+	.container{
+		width:1180px;
+	}	
+}
+
 .nxdc-main {
     position: absolute;
     padding: 0;

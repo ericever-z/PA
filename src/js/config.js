@@ -6,7 +6,8 @@ require.config({
         'bootstrap':'../../lib/bootstrap/dist/js/bootstrap.min',
 		'pretty':'../../lib/code-prettify/loader/prettify',
 		'moment':'../../lib/moment/moment.min',
-	
+		'NVis':'../../lib/hicharts/NVis.min',
+		'com/ndpmedia/vis/ChartWidget':'../../lib/hicharts/NVis.min',
 		//本地全局使用的模块，alias
 		'note':'./model/Note',//全局使用
 		'http':'./utils/http',//全局使用
@@ -78,6 +79,15 @@ require.config({
 		},
 		blend:{
 			deps:['vList3','bread','drop3']
+		},
+		NVis:{
+			deps:['jquery']
+		},		
+		'com/ndpmedia/vis/ChartWidget':{
+			deps:['NVis']
+		},
+		'com/ndpmedia/vis/ChartEventListener':{
+			deps:['NVis']
 		}
     }
 });

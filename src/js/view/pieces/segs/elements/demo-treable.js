@@ -1,7 +1,8 @@
-define(function(){
+define(['com/ndpmedia/vis/ChartWidget'],function(ChartWidget){
 	function Demo(){
 			var bool = false;
 			var bool1 = false;
+			var gdata = {"data":[{"fields":[{"id":"x","name":"Month","category":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]},{"id":"y","name":"temperature"},{"id":"z","name":"city","category":["Tokyo","New York","Berlin","London"]}],"rows":[[0,7,0],[1,6.9,0],[2,9.5,0],[3,14.5,0],[4,18.2,0],[5,21.5,0],[6,25.2,0],[7,26.5,0],[8,23.3,0],[9,18.3,0],[10,13.9,0],[11,9.6,0],[0,0.2,1],[1,0.8,1],[2,5.7,1],[3,11.3,1],[4,17,1],[5,22,1],[6,24.8,1],[7,24.1,1],[8,20.1,1],[9,14.1,1],[10,8.6,1],[11,2.5,1],[0,0.9,2],[1,0.6,2],[2,3.5,2],[3,8.4,2],[4,13.5,2],[5,17,2],[6,18.6,2],[7,17.9,2],[8,14.3,2],[9,9,2],[10,3.9,2],[11,1,2],[0,3.9,3],[1,4.2,3],[2,5.7,3],[3,8.5,3],[4,11.9,3],[5,15.2,3],[6,17,3],[7,16.6,3],[8,14.2,3],[9,10.3,3],[10,6.6,3],[11,4.8,3]]}],"grammar":{"graph":"basic","coordinates":{"dimensions":[{"axis":[{"id":"yAxis","title":[{"$ref":"y"}],"titleStyle":{"fill":"red","outline":"yellow"}}]},{"axis":[{"title":[{"$ref":"x"}]}]}]},"elements":[{"type":"spline","tooltipContent":[{"$ref":"z"},":",{"$ref":"y"},"<br>"],"position":[{"field":{"$ref":"y"}},{"field":{"$ref":"x"}}],"color":[{"field":{"$ref":"z"}}]}]},"tooltip":{"shared":true},"titles":[{"type":"title","label":{"content":["Monthly Average Temperature"]}}]};
 			var data1 = [{label: [{status:true},{name:"中华人民共和国"},{text:2000},{text:2},{text:20},{text:2000},
 							   {text:2},{text:20},{text:2},{text:20}],
 						     sub:[{label:[{status:true},{name:"美国"},{text:1100},{text:2},{text:20},{text:2000},{text:2},{text:20},{text:2},{text:20}],
@@ -59,7 +60,13 @@ define(function(){
 					 ],				
 				body:data1,
 				tail:[{},{}],
-				sort:[3,5,7,9],//base from 0 
+				sort:[3,5,7,9],//base from 0
+				//这个配置是用来显示，图表层展开时 tab项的，有几个项就有几个数组元素，name是tab上显示的名字
+				tabs:[
+					  {id:"1101",name:'线状图',type:"line"},
+					  {id:"1102",name:"饼状图",type:"pie"},
+					  {id:"1103",name:"堆积图",type:'dui'}
+					 ],
 				todata:[{name:"调整预算出价",id:"price"},{name:"编辑",id:"edit"},{name:"看图表",id:"chart"}]//工具条上的按钮
 			}).on("MISSION_COMPLETE",function(e){
 				
@@ -71,6 +78,21 @@ define(function(){
 			}).on("STATUS_CHANGE",function(e){
 				var evt = e.originalEvent;
 				
+			}).on("TAB_SHOW CHART_LAYER_INIT",function(e){//处理图表或者其他。。
+				var da = e.originalEvent.data; // 返回数据如下
+				//{name: "编辑", id: "edit", dataID: 11110, GD: jQUERY}
+				// name 选中的tab的名称， dataID :所在行数据id   GD: JQUERY对象，图表的绘图区域DOM
+				if(e.type == "CHART_LAYER_INIT"){//首次打开图表层
+					var chartWidget = new ChartWidget();
+					chartWidget.placeAt(da.GD);
+					chartWidget.setVisJson(gdata);					
+				}else{//切换 tab 时，判断当下是否有图表，有图表，就不需要重绘了
+					if(da.GD.children().length==0){
+						var chartWidget = new ChartWidget();
+						chartWidget.placeAt(da.GD);
+						chartWidget.setVisJson(gdata);
+					}
+				}
 			});
 		
 			//显示 隐藏 头部工具栏
