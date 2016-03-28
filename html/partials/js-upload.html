@@ -43,6 +43,8 @@ $('.upload-container').fileupload({
     //如果有,则给按钮绑定上传事件，当按钮点击时则上传
     //如果没有，则拖放后立即上传
     button: false,
+    //可以通过form来初始化上传数据
+    form: false,
     name: 'file',   //上传拖拽区域的字段
     type: 'image',  //上传文件的MIME Type的正则字符串或者正则表达式对象
     width: 560,     //上传拖拽区域宽度
