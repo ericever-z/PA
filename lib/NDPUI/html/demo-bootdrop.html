@@ -9,8 +9,8 @@
     <meta name="format-detection" content="telephone=yes" />
     <meta content="false" name="twcClient" id="twcClient" />
     <link href="../lib/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-     <link href=../com/css/body.min.css rel="stylesheet" type="text/css">
-    <link href=../com/css/nxdc.min.css rel="stylesheet" type="text/css">
+     <link href="../src/css/pages/body.css" rel="stylesheet" type="text/css">
+    <link href="../src/css/pages/nxdc.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -19,11 +19,11 @@
 </head>
 <body>
   <div class="container-fluid ndp-ui-header"></div> 
-	<div class="container ndp-ui-main" style="margin-top:200px;">
-    <div class="upload-container"></div>
-    <input type="text" id='hehe'>
-    <button class="btn btn-primary" id='upload-button'>点击这里才能上传哦~come on</button>
+	<div class="container ndp-ui-main" style="margin-top:100px;height:1000px;background-color:pink;">
+		<div class="wrapper-2" style="position:relative;height:400px;">
+			<div id="hello2" style="width:200px;height:30px;"></div>
+		</div>
 	</div>	   	 	   	  	   	 	   	  
-  <script src='../lib/require.js' data-main='./js/demo-upload'></script> 
+  <script src="../lib/requirejs/require.js" data-main="../src/js/demo-bootdrop"></script> 
 </body>
 </html>
