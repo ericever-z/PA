@@ -1,11 +1,12 @@
 define(function(){
 	function Static(){};
 		/**菜单列表**/
-	Static.MENU_LIST = [{name:"首页"},
-						{name:"简介"},
-						{name:"控件"},
-						{name:"CSS"},
-						{name:"Demo"}];
+	Static.MENU_LIST = [{name:"首页",id:"home"},
+						{name:"简介",id:"brief"},
+						{name:"控件",id:"com"},
+						{name:"CSS",id:"css"},
+						{name:"字体",id:"fonts"},
+						{name:"Demo",id:"demo"}];
 
 	Static.TABS = [
 					[
