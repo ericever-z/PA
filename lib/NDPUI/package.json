@@ -1,10 +1,6 @@
 {
   "name": "NDPUI",
-<<<<<<< HEAD
   "version": "1.0.28",
-=======
-  "version": "1.0.27",
->>>>>>> 610c314e17514fa453ad5bb724c2d9863043e5e2
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
