@@ -52,3 +52,57 @@ $("button#ok").click(function(){
 		</code>
 	</pre>
 </div>
+
+<h4 class="lead">
+	vList2-- 支持图片格式的图标
+</h4>
+<div class="bs-example">
+		<button class="btn btn-warning" id="ok2">收起/展开</button>
+		<div class="ndp-vList2-wrapper" name="png" style="margin-top:-60px;left:150px"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-js">
+&lt;div class="ndp-vList2-wrapper" name="png"&gt;&lt;/div&gt;	
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+var vl = $(".ndp-vList2-wrapper[name=plain]").vList2({
+	data:[{label:"广告投放",
+		   icon:{big:"../../imgs/ggtf-big.png",sm:"../../imgs/ggtf-sm.png"},
+		   sub:[
+			{label:"河北"},
+			{label:"河南"},
+			{label:"陕西"},
+			{label:"北京"}
+		 ]},
+		 {label:"资源监控",
+		 icon:{big:"../../imgs/sc-big.png",sm:"../../imgs/sc-sm.png"},
+		  sub:[
+				{label:"法国"},
+				{label:"意大利"},
+				{label:"德国"},
+				{label:"卢森堡"},
+				{label:"荷兰"}
+		 ]},
+		 {label:"美洲每周",
+		 icon:{big:"../../imgs/user-big.png",sm:"../../imgs/user-sm.png"},
+		  sub:[
+				{label:"美国"},
+				{label:"加拿大"},
+				{label:"巴西"},
+				{label:"阿根廷"}
+		 ]}					  
+		]
+});
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">
+$("button#ok").click(function(){
+	vl.fold();
+});			
+		</code>
+	</pre>
+</div>
