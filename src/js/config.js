@@ -33,11 +33,11 @@ require.config({
 		'vList2':'../../lib/NDPUI/dist/com/splitjs/vList2',
 		'drop2':'../../lib/NDPUI/dist/com/splitjs/drop2',
 		'drop3':'../../lib/NDPUI/dist/com/splitjs/drop3',
-		'daterangepicker':'../../lib/daterangepicker/daterangepicker',
+		'daterangepicker':'../../lib/NDPUI/dist/com/splitjs/daterangepicker',
 		
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
 		'sutable':'../../lib/NDPUI/dist/com/splitjs/sutable',
-		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
+		'bubble':'../../lib/NDPUI/ddateist/com/splitjs/bubble',
 		'timerange':'../../lib/NDPUI/dist/com/splitjs/timerange',
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
 		'vList3':'../../lib/NDPUI/dist/com/splitjs/vList3',
