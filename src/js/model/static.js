@@ -52,6 +52,7 @@ define(function(){
 						{name:"单选/多选",part:"check-radio"},
 						{name:"静态表单",part:"form"}
 					],
+					[{name:"字体示例",part:"fonts"}],
 					[
 						{name:"示例网站1",part:"site1"},
 						{name:"示例网站2",part:"site2"}
