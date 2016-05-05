@@ -1,3 +1,4 @@
+/*jslint evil: true */
 (function(){
   if ( typeof window.CustomEvent === "function" ) return false;
   function CustomEvent ( event, params ) {
