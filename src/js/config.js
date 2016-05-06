@@ -37,7 +37,7 @@ require.config({
 		
 		'treable':'../../lib/NDPUI/dist/com/splitjs/treable',
 		'sutable':'../../lib/NDPUI/dist/com/splitjs/sutable',
-		'bubble':'../../lib/NDPUI/ddateist/com/splitjs/bubble',
+		'bubble':'../../lib/NDPUI/dist/com/splitjs/bubble',
 		'timerange':'../../lib/NDPUI/dist/com/splitjs/timerange',
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
 		'vList3':'../../lib/NDPUI/dist/com/splitjs/vList3',

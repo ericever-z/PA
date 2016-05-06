@@ -16,11 +16,11 @@
     "jquery": "1.9.*",
     "bootstrap": "^3.*"
   },
-  "_release": "9a671e320d",
+  "_release": "3a243db9aa",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "9a671e320dd126521f487b9ad747ef48a1a01b13"
+    "commit": "3a243db9aaebb815d699e98f8882892cbb31a3c9"
   },
   "_source": "http://git.dy/vigo.feng/nxdc-component-library.git",
   "_target": "*",
