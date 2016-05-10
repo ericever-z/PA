@@ -257,6 +257,12 @@ var data2 = [{
 				bool = !bool;
 				hwd.update((bool?data2:data1),sum);
 			});
+        
+			$("#ajax").click(function(){
+                hwd.updateAjaxOption({
+                     url: "../data/sutable2.json"
+                }); 
+			});               
 	}
 	return Demo;
 });

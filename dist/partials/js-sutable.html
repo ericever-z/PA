@@ -7,6 +7,7 @@
 <div class="bs-example">
 	<div style="margin:10px auto">
 	<button class="btn btn-success" id="update">更新数据</button>
+	<button class="btn btn-danger" id="ajax">更新ajax</button>
 	</div>
 	<div class="doc-html-wrapper">
 		<div class="ndp-sutable-wrapper" name="plain"> 	
@@ -78,6 +79,14 @@ $("#update").click(function(){
 	bool = !bool;
 	hwd.update((bool?data2:data1),sum);
 });
+
+//更新ajax 请求的参数
+$("#ajax").click(function(){
+    hwd.updateAjaxOption({
+         url: "../data/sutable2.json"
+    });
+});    
+    
 		</code>
 	</pre>
 </div> 
