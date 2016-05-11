@@ -41,7 +41,8 @@ require.config({
 		'timerange':'../../lib/NDPUI/dist/com/splitjs/timerange',
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
 		'vList3':'../../lib/NDPUI/dist/com/splitjs/vList3',
-		'blend':'../../lib/NDPUI/dist/com/splitjs/blend'
+		'blend':'../../lib/NDPUI/dist/com/splitjs/blend',
+        'field':'../../lib/NDPUI/dist/com/splitjs/field'
     },
     shim:{
         'bootstrap':{

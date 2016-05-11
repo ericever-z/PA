@@ -40,7 +40,8 @@ define(function(){
 						{name:"时间范围选择器",part:"js-timerange"},
 						{name:"气泡",part:"js-bubble"},
 						{name:"文件上传",part:"js-upload"},
-						{name:"组合选择控件",part:"js-blend"}
+						{name:"组合选择控件",part:"js-blend"},
+                        {name:"富文本输入框",part:"js-field"}
 					],		
 					[
 						{name:"概览",part:"overview"},
