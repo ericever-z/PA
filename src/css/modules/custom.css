@@ -9,7 +9,7 @@
 } 
 
 .ndp-table-wrapper[name='motley'] .ndp-table-body .ndp-table-row:nth-child(even){
-	background-color: #ececec;
+	background-color: #f6f6f6;/*****#ececec****/;
 }
 
 .ndp-table-wrapper[name='motley'] .ndp-table-body .ndp-table-row:nth-child(odd){

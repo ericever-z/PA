@@ -29,7 +29,7 @@ define(function(){
 			
 			showTip({
 				type:"success",
-				content:"成功！恒大在今天晚上的世界俱乐部大赛上成功击败巴塞罗那！<button class='btn btn-primary btn2 btn-sm'>分享</button>",
+				content:"成功！恒大在今天晚上的世界俱乐部大赛上成功击败巴塞罗那！<button class='btn btn-success btn2 btn-sm'>分享</button>",
 				icon:"<i class='glyphicon glyphicon-flag'></i>",
 				close:true,
 				closeCallback:function(){//回调，用户关闭tip或者时间到期
