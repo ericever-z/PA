@@ -17,7 +17,7 @@ define(function(){
 						icon:"<i class='glyphicon glyphicon-globe'></i>",
 						content:"这里显示的是一个地球，用来测试图片在?",
 						btnOK:"确定",//确定按钮文字
-						btnCANCEL:"CANCEL",//关闭按钮文字
+						btnCANCEL:"取消",//关闭按钮文字
 						onOK:function(){// 点击 “确认” 按钮回调函数
 							console.log("ok 了");
 						},
