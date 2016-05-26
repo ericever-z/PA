@@ -1,0 +1,118 @@
+.ndp-table2-wrapper{
+
+}
+
+
+.ndp-table2-wrapper .table th,.ndp-table2-wrapper .table td{
+    height: 36px;
+}
+
+.ndp-table2-wrapper .table-head,.ndp-table2-wrapper .table-body{
+    margin: 0;
+}
+
+.ndp-table2-wrapper .table-head tbody>tr>td,.ndp-table2-wrapper .table-body thead>tr>th{
+    position: relative;
+    line-height: 0!important;
+    margin: 0;
+    height:0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font-style: normal;
+}
+
+/*****
+** head  border 改为 1px
+****/
+.ndp-table2-wrapper>.table>thead>tr>th{
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    border:1px solid #ddd;
+}
+.ndp-table2-wrapper>.table-head{
+    z-index: 100;
+    height: 36px;
+    border:1px solid #ddd;
+    border-bottom:0;
+}
+
+.ndp-table2-wrapper>.table-head>thead>tr>th{
+    border-bottom-width: 0;
+    position: relative;
+    height: 36px;
+}
+
+/****
+** 列表头部分割线 拖拽区域
+***/
+.ndp-table2-wrapper>.table-head>thead>tr>th>.split-field{
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 10px;
+    z-index: 10;
+    top:0;
+    right: -5px;
+    cursor:col-resize;
+}
+
+/***
+** 列表头部  排序按钮
+***/
+.ndp-table2-wrapper>.table-head>thead>tr>th>.sort-field{
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+.ndp-table2-wrapper>.table-head>thead>tr>th>.sort-field>i.glyphicon{
+    position: absolute;
+    display: block;
+    transform: scale(0.55);
+    left: -50%;
+    top:5px;
+}
+.ndp-table2-wrapper>.table-head>thead>tr>th>.sort-field>i.glyphicon-triangle-bottom{
+    top:11px;
+}
+
+.ndp-table2-wrapper>.table-head>tbody,.ndp-table2-wrapper>.table-body>thead{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.ndp-table2-wrapper>.table-body>thead>tr>th{
+    pointer-events: none;
+    overflow: hidden;
+}
+/***
+** 下半部分向上平移 1px
+***/
+.ndp-table2-wrapper>.table-body{
+    margin-top:-33px;
+    border:1px solid #ddd;
+    border-top:0;
+}
+
+
+.ndp-table2-wrapper>.table-body>tbody>tr:hover{
+    background-color: #e9e8e5;  /***** #fff4e7;****/
+    cursor: pointer;    
+}
+.ndp-table2-wrapper>.table.table-body>tbody>tr.active>td{
+    background-color: #e0e0e0;
+    color:#666;
+}
+.ndp-table2-wrapper>.table-body>tbody>tr>td.active,.ndp-table2-wrapper>.table-head>thead>tr>th.active{
+     background-color: #e0e0e0;
+     color:#666;
+}
