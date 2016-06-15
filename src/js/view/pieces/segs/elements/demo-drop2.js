@@ -68,7 +68,21 @@ define(function(){
 					 ]
 			}).on("SELECT_CHANGE",function(e){
 				console.log(e.originalEvent.data);
-			}).val("修改密码");			
+			}).val("修改密码");
+        
+			$(".dropdown.drop2-wrapper[name='button']").drop2({
+				id:"meme4",
+                showcaret:false,
+				label:'<button class="btn btn-default">点击下拉</button>',
+				data:[
+					  {label:"用户设置"},
+					  {label:"修改密码"},
+					  {label:"接触绑定"},
+					  {label:"退出"}
+					 ]
+			}).on("SELECT_CHANGE",function(e){
+				console.log(e.originalEvent.data);
+			});	        
 	}
 	return Demo;
 });

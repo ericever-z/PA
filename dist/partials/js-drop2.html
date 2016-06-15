@@ -136,7 +136,38 @@ $(".dropdown.drop2-wrapper[name='cc']").drop2({
 }).val("修改密码"); //默认 显示的值 默认显示下拉列表中的第一个		
 		</code>
 	</pre>
-</div>	
+</div>
+
+<h4 class="lead">
+	下拉选项--按钮样式
+</h4>
+<div class="bs-example bs-example2">
+	<div class="dropdown drop2-wrapper" name="button"></div>
+</div>
+<div class="highlight">
+	<pre class="prettyprint">
+		<code class="language-html">
+&lt;div class="dropdown drop2-wrapper" name="button"&quot;&gt;&lt;/div&gt;
+		</code>
+	</pre>
+	<pre class="prettyprint">
+		<code class="language-js">			
+$(".dropdown.drop2-wrapper[name='button']").drop2({
+	id:"meme4",
+	showcaret:false,//不显示>
+	label:"&le;button class='btn btn-default'&gt;点击下拉&le;/button&gt;",
+	data:[
+		  {label:"用户设置"},
+		  {label:"修改密码"},
+		  {label:"接触绑定"},
+		  {label:"退出"}
+		 ]
+}).on("SELECT_CHANGE",function(e){
+	console.log(e.originalEvent.data);//{value:选中的值 string}
+});	
+		</code>
+	</pre>
+</div>			
 	
 		
 	
