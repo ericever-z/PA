@@ -4,6 +4,7 @@ define(function(){
 				id:"meme1",
 				caret:"<i class='glyphicon glyphicon-menu-down'></i>",
 				label:"文字drop测试",
+                showcaret:true,
 				data:[
 					  {label:"用户设置"},
 					  {label:"修改密码"},
@@ -18,6 +19,7 @@ define(function(){
 		
 			$(".dropdown[name='bb']").drop2({
 				id:"meme2",
+                showcaret:true,
 				caret:"<i class='glyphicon glyphicon-menu-down'></i>",
 				label:"多级菜单",
 				data:[
@@ -41,6 +43,7 @@ define(function(){
 		
 			$(".dropdown.drop2-wrapper[name='bbc']").drop2({
 				id:"meme3",
+                showcaret:true,
 				caret:"<i class='glyphicon glyphicon-menu-down'></i>",//下拉三角形的图标
 				label:"<i class='glyphicon glyphicon-th-list'></i>",//显示的图标
 				data:[
@@ -58,6 +61,7 @@ define(function(){
 			$(".dropdown.drop2-wrapper[name='cc']").drop2({
 				type:2,
 				id:"meme2",
+                showcaret:true,
 				caret:"<i class='glyphicon glyphicon-menu-down'></i>",
 				label:{label:"用户设置"},
 				data:[
