@@ -42,7 +42,8 @@ require.config({
 		'upload':'../../lib/NDPUI/dist/com/splitjs/upload',
 		'vList3':'../../lib/NDPUI/dist/com/splitjs/vList3',
 		'blend':'../../lib/NDPUI/dist/com/splitjs/blend',
-        'field':'../../lib/NDPUI/dist/com/splitjs/field'
+        'field':'../../lib/NDPUI/dist/com/splitjs/field',
+        'upload2':'../../lib/NDPUI/dist/com/splitjs/upload2'
     },
     shim:{
         'bootstrap':{
@@ -89,6 +90,9 @@ require.config({
 		},
 		'com/ndpmedia/vis/ChartEventListener':{
 			deps:['NVis']
-		}
+		},
+        upload2:{
+            deps:['bootstrap']
+        }
     }
 });
